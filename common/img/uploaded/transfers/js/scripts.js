@@ -2,6 +2,28 @@
 
   if ($(".transfer-form").length) {
   
+    $("#formInt").attr("autocomplete", "off");
+    $("#formRus").attr("autocomplete", "off");
+    
+    $("#tf_form_from").before("<span class='placeholder'>Город</span>");
+    $("#tf_form_to").before("<span class='placeholder'>Город</span>");
+    $("#tf_form_country").before("<span class='placeholder'>Страна</span>");
+    
+    $(".placeholder").click(function() {
+      $(this).hide();
+      $(this).next("input").focus();
+    });
+    
+    $(".form-text").focus(function() {
+      $(this).prev(".placeholder").hide();
+    });
+    
+    $(".form-text").blur(function() {
+      if ($(this).val() == "") {
+        $(this).prev(".placeholder").show();
+      }
+    });
+  
     var transfersRaw = $.getCsv('../../../../common/img/uploaded/transfers/example.csv');
     
     if (transfersRaw) {
@@ -348,7 +370,7 @@
     function acSelect(element) {
       if ($(".autocomplete .act").length) {
         element.val($(".autocomplete .act span").html());
-		element.next().val('1');
+        element.next().val('1');
         $(".autocomplete").remove();
         //$("#formInt").submit();
       } else {
@@ -424,419 +446,439 @@
   
   // Валидация форм
   
-  var validator = $("#formRus").bind("invalid-form.validate", function() {
-			$("#summary").html("Пожалуйста, заполните все поля");
-		}).validate({
-    
-    sendForm : false,
-    messages: {
-      tf_form_sum: "",
-      tf_form_from: "",
-      tf_form_to: ""
-    },
-    errorPlacement: function(error, element) {
-      //element.parents(".input-wrapper").addClass("input-wrapper-error");
-    },
-    unhighlight: function(element, errorClass, validClass) {
-      //$(element).parents(".input-wrapper").removeClass("input-wrapper-error");
-      $(element).removeClass(errorClass);
-    }
-  });
-  $("#tf_form_from").attr('placeholder', "Город");
-  $('<input/>').attr({ type: 'hidden', id: 'tf_form_from_val', name: 'tf_form_from_val', 'value' : 0}).insertAfter($("#tf_form_from"));
-  $("#tf_form_from").bind('change', function(){$(this).next().val('0')})
-
-  $("#tf_form_to").attr('placeholder', "Город");
-  $('<input/>').attr({ type: 'hidden', id: 'tf_form_to_val', name: 'tf_form_to_val', 'value' : 0}).insertAfter($("#tf_form_to"));
-  $("#tf_form_to").bind('change', function(){$(this).next().val('0')})
-
-  $("#tf_form_country").attr('placeholder', "Страна");
-  $('<input/>').attr({ type: 'hidden', id: 'tf_form_country_val', name: 'tf_form_country_val', 'value' : 0}).insertAfter($("#tf_form_country"));
-  $("#tf_form_country").bind('change', function(){$(this).next().val('0')})
-
-  $("#tf_form_sum").rules("add", { regex: "^[0-9\\s]+ р.$" });
-
-	$("#formRus").submit(function() {
-  
-    if( $('#tf_form_from_val').val() == 0){
-      $("#tf_form_from").val('')
-    };
-    if( $('#tf_form_to_val').val() == 0){
-      $("#tf_form_to").val('')
-    };
-	
-    if ($("#formRus").valid()) {
-      $("#formRus").append("<div class='loader' />");
-      $.ajax().done(function() {
-      
-        if (!transfers) {
-          alert('Произошла техническая ошибка. Попробуйте перегрузить страницу.');
-        }
-      
-        /* .Submit message */
-        $(".loader").remove();
-        $(".transfers-offers").remove();
-        
-        var transferSum = $("#tf_form_sum").val().replace(" р.","");
-        
-        transferSum = parseFloat(transferSum.replace(/ /g,''));
-
-        var transferType = $("[name='tf-type']:checked").val();
-        
-        if (transferType == 1) {
-          transferType = "Нал"
-        } else if (transferType == 2) {
-          transferType = "Безнал"
-        }
-        
-        var transfersResult = new Array();
-        
-        for (i=0;i<transfers.length;i++) {
-          if (transfers[i][0] == "РФ" && transfers[i][1] == transferType) {
-            transfersResult.push(transfers[i]);
-          }
-        }
-        
-        $("#formRus").parents(".transfer-descr-wrapper").parents(".fc").after("<div class='transfers-offers'></div>");
-        
-        $(".transfers-offers").append("<h2>Вам подходит</h2>");
-        $(".transfers-offers").append("<div class='offers-list fc'>");
-        
-        for (i=0;i<transfersResult.length;i++) {
-          if (transfersResult[i][1] == "Нал") {
-            trFrom = "Наличные";
-            var link = "nal_rus";
-          }
-          if (transfersResult[i][1] == "Безнал") {
-            trFrom = "Безнал.";
-            var link = "beznal_rus"
-          }
-          if (transfersResult[i][2] == "Счет") trTo = "На счет";
-          if (transfersResult[i][2] == "Карта") trTo = "На карту";
-          if (transfersResult[i][2] == "Нал") trTo = "Наличные";
-          
-          var timeArr = transfersResult[i][4].split(" ");
-          
-          if (timeArr[1] == "день" || timeArr[1] == "дней" || timeArr[1] == "дня") {
-            var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
-            if(num==0) units = "дней"; 
-            if(num==1) units = "дня";
-            if(num==2) units = "дней";
-            if(num==3) units = "дней";
-            if(num==4) units = "дней";
-            if(num>=5) units = "дней";
-            if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "дней"
-          }
-          
-          if (timeArr[1] == "час" || timeArr[1] == "часов" || timeArr[1] == "часа") {
-            var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
-            if(num==0) units = "часов"; 
-            if(num==1) units = "часа";
-            if(num==2) units = "часов";
-            if(num==3) units = "часов";
-            if(num==4) units = "часов";
-            if(num>=5) units = "часов";
-            if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "часов"
-          }
-          
-          if (timeArr[1] == "минута" || timeArr[1] == "минут" || timeArr[1] == "минуты") {
-            var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
-            if(num==0) units = "минут"; 
-            if(num==1) units = "минута";
-            if(num==2) units = "минуты";
-            if(num==3) units = "минуты";
-            if(num==4) units = "минуты";
-            if(num>=5) units = "минут";
-            if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "минут"
-          }
-            
-            
-          if (transfersResult[i][2] != "Колибри" && transfersResult[i][2] != "Маниграмм") {
-            timeTtl = "Время перевода"
-          } else {
-            timeTtl = "Срочный перевод";
-          }
-          
-          timeVal = "<div class='offer-data'>до <span>" + timeArr[0] + "</span> " + units + "</div>";
-          
-          if (transfersResult[i][2] != "Колибри") {
-            trMethod = trFrom + " <span class='sep'><img src='../../../../common/img/uploaded/transfers/img/orange-rarr.png' /></span> " + trTo;
-          } else {
-            var link = "colibri#russia"
-            trMethod = "<img src='../../../../common/img/uploaded/transfers/img/ico-colibri.png' class='ico'/> Перевод Колибри"
-          }
-          
-          var comMin = parseInt(transfersResult[i][6]);
-          var comMax = parseInt(transfersResult[i][7]);
-          var comVal = transferSum*parseFloat(transfersResult[i][5].replace(",","\."))/100;
-          
-          if (comVal < comMin) {
-            comVal = comMin
-          }
-          
-          if (comVal > comMax) {
-            comVal = comMax
-          }
-          
-          comVal = comVal + "";
-          
-          var comArr = comVal.split("\.");
-          
-          comInt = comArr[0];
-          comFloat = comArr[1];
-          
-          if (comFloat) {
-            if (comFloat<10) comFloat = comFloat*10;
-            var comString = "<div class='offer-data'><span>" + comInt +",</span><span class='sup'>" + comFloat + "</span> р.</div>"
-          } else {
-            var comString = "<div class='offer-data'><span>" + comInt +"</span> р.</div>"
-          }
-
-          
-          
-          $(".tab-content[rel='russia']").find(".offers-list").append("<div class='item' />");
-          var item = $(".tab-content[rel='russia']").find(".offers-list .item").eq(i);
-          
-          item.append("<div class='ttl'>" + trMethod + "</div>")
-          
-          item.append("<div class='descr' />");
-          
-          item.find(".descr").append("<table></table>");
-          
-          item.find(".descr table").append("<tr><td>" + timeTtl + "</td><td>" + timeVal + "</td></tr>");
-          item.find(".descr table").append("<tr><td>Комиссия</td><td>" + comString + "</td></tr>");
-          item.find(".descr").append("<a class='button button-2' href='" + link +"' target='_blank'><span>Подробнее</span></a>");
-          
-        }
-        
-      });
-      
-    }
-	
-    return false;
-	
-	});
-  
-  var validator2 = $("#formInt").bind("invalid-form.validate", function() {
-			$("#summary").html("Пожалуйста, заполните все поля");
-		}).validate({
-    sendForm : false,
-    messages: {
-      tf_form_sum_int: "",
-      tf_form_country: "Укажите страну"
-    },
-    errorPlacement: function(error, element) {
-      //element.parents(".input-wrapper").addClass("input-wrapper-error");
-    },
-    unhighlight: function(element, errorClass, validClass) {
-      //$(element).parents(".input-wrapper").removeClass("input-wrapper-error");
-      $(element).removeClass(errorClass);
-    }
-  });
-  
-  $("#tf_form_sum_int").rules("add", { regex: "^[0-9\\s]+$" });
-  
-  $("#formInt").submit(function() {
-  	if( $('#tf_form_country_val').val() == 0){
-		$("#tf_form_country").val('')
-	};
-	
-    if ($("#formInt").valid()) {
-    
-      $("#formInt").append("<div class='loader' />");
-      $.ajax().done(function() {
-      
-        if (!transfers) {
-          alert('Произошла техническая ошибка. Попробуйте перегрузить страницу.')
-        }
-      
-        /* .Submit message */
-        $(".loader").remove();
-        $(".transfers-offers").remove();
-        
-        var transferSum = $("#tf_form_sum_int").val();
-        
-        transferSum = parseFloat(transferSum.replace(/ /g,''));
-        
-        
-        var transferType = $("[name='tf-type-int']:checked").val();
-        
-        if (transferType == 1) {
-          transferType = "Нал"
-        } else if (transferType == 2) {
-          transferType = "Безнал"
-        }
-        
-
-        var transferCurr = $("[name='tf-curr']:checked").val();
-
-        
-        
-        if (transferCurr == 1) {
-          transferCurr = "Рубли";
-          trUnits = "р."
-        } else if (transferCurr == 2) {
-          transferCurr = "Доллары"
-          trUnits = "$"
-        } else if (transferCurr == 3) {
-          transferCurr = "Евро"
-          trUnits = "€"
-        }
-        
-        var transfersResult = new Array();
-        
-        for (i=0;i<transfers.length;i++) {
-          if (transfers[i][2] != "Колибри") {
-            if (transfers[i][0] == "Международный" && transfers[i][1] == transferType && transfers[i][3] == transferCurr) {
-              transfersResult.push(transfers[i]);
-            }
-          } else {
-            if (transfers[i][1] == "Нал" && ($("#tf_form_country").val().toLowerCase() == "беларусь" || $("#tf_form_country").val().toLowerCase() == "украина" || $("#tf_form_country").val().toLowerCase() == "казахстан") && transfers[i][0] == "Международный" && transfers[i][1] == transferType && transfers[i][3] == transferCurr) {
-              transfersResult.push(transfers[i]);
-            }
-          }
-          
-        }
-        
-        $("#formInt").parents(".transfer-descr-wrapper").parents(".fc").after("<div class='transfers-offers'></div>");
-        
-        $(".transfers-offers").append("<h2>Вам подходит</h2>");
-        $(".transfers-offers").append("<div class='offers-list fc'>");
-        
-        for (i=0;i<transfersResult.length;i++) {
-          if (transfersResult[i][1] == "Нал") {
-            trFrom = "Наличные";
-            var link = "nal_int";
-          }
-          if (transfersResult[i][1] == "Безнал") {
-            trFrom = "Безнал.";
-            var link = "beznal_int"
-          }
-          if (transfersResult[i][2] == "Счет") trTo = "На счет";
-          if (transfersResult[i][2] == "Карта") trTo = "На карту";
-          if (transfersResult[i][2] == "Нал") trTo = "Наличные";
-          
-          
-          var timeArr = transfersResult[i][4].split(" ");
-          
-          if (timeArr[1] == "день" || timeArr[1] == "дней" || timeArr[1] == "дня") {
-            var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
-            if(num==0) units = "дней"; 
-            if(num==1) units = "дня";
-            if(num==2) units = "дней";
-            if(num==3) units = "дней";
-            if(num==4) units = "дней";
-            if(num>=5) units = "дней";
-            if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "дней"
-          }
-          
-          if (timeArr[1] == "час" || timeArr[1] == "часов" || timeArr[1] == "часа") {
-            var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
-            if(num==0) units = "часов"; 
-            if(num==1) units = "часа";
-            if(num==2) units = "часов";
-            if(num==3) units = "часов";
-            if(num==4) units = "часов";
-            if(num>=5) units = "часов";
-            if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "часов"
-          }
-          
-          if (timeArr[1] == "минута" || timeArr[1] == "минут" || timeArr[1] == "минуты") {
-            var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
-            if(num==0) units = "минут"; 
-            if(num==1) units = "минута";
-            if(num==2) units = "минуты";
-            if(num==3) units = "минуты";
-            if(num==4) units = "минуты";
-            if(num>=5) units = "минут";
-            if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "минут"
-          }
-            
-            
-          if (transfersResult[i][2] != "Колибри" && transfersResult[i][2] != "Маниграмм") {
-            timeTtl = "Время перевода"
-          } else {
-            timeTtl = "Срочный перевод";
-          }
-          
-          timeVal = "<div class='offer-data'>до <span>" + timeArr[0] + "</span> " + units + "</div>";
-          
-          if (transfersResult[i][2] != "Колибри" && transfersResult[i][2] != "Маниграмм") {
-            trMethod = trFrom + " <span class='sep'><img src='../../../../common/img/uploaded/transfers/img/orange-rarr.png' /></span> " + trTo;
-          } else if (transfersResult[i][2] == "Колибри") {
-            var link = "colibri#international"
-            trMethod = "<img src='../../../../common/img/uploaded/transfers/img/ico-colibri.png' class='ico'/> Перевод Колибри"
-          } else if (transfersResult[i][2] == "Маниграмм") {
-            var link = "moneygram_int"
-            trMethod = "<img src='../../../../common/img/uploaded/transfers/img/ico-moneygram.png' class='ico'/> Перевод MoneyGram"
-          }
-          
-          var comMin = parseInt(transfersResult[i][6]);
-          var comMax = parseInt(transfersResult[i][7]);
-          var comVal = transferSum*parseFloat(transfersResult[i][5].replace(",","\."))/100;
-          
-          if (comVal < comMin) {
-            comVal = comMin
-          }
-          
-          if (comVal > comMax) {
-            comVal = comMax
-          }
-          
-          comVal = comVal + "";
-          
-          var comArr = comVal.split("\.");
-          
-          comInt = comArr[0];
-          comFloat = comArr[1];
-          
-          if (comFloat) {
-            if (comFloat<10) comFloat = comFloat*10;
-            var comString = "<div class='offer-data'><span>" + comInt +",</span><span class='sup'>" + comFloat + "</span> " + trUnits + "</div>"
-          } else {
-            var comString = "<div class='offer-data'><span>" + comInt +"</span> " + trUnits + "</div>"
-          }
-          
-          if (transfersResult[i][2] == "Маниграмм") {
-            var comString = "<div class='offer-data'>от <span>2</span> долларов</div>"
-          }
-          
-          
-          $(".tab-content[rel='international']").find(".offers-list").append("<div class='item' />");
-          var item = $(".tab-content[rel='international']").find(".offers-list .item").eq(i);
-          
-          item.append("<div class='ttl'>" + trMethod + "</div>")
-          
-          item.append("<div class='descr' />");
-          
-          item.find(".descr").append("<table></table>");
-          
-          item.find(".descr table").append("<tr><td>" + timeTtl + "</td><td>" + timeVal + "</td></tr>");
-          item.find(".descr table").append("<tr><td>Комиссия</td><td>" + comString + "</td></tr>");
-          item.find(".descr").append("<a class='button button-2' href='" + link +"' target='_blank'><span>Подробнее</span></a>");
-          
-        }
-        
-      });
-      
-    }
-    
-    return false;
-	});
-  
   if ($(".transfer-form").length) {
-
-  $.validator.addMethod(
-    "regex",
-    function(value, element, regexp) {
-        var re = new RegExp(regexp);
-        return this.optional(element) || re.test(value);
-    },
-    "Please check your input."
-  );
   
-}  
-	$(".transfer-form").show();
+    var validator = $("#formRus").bind("invalid-form.validate", function() {
+        $("#summary").html("Пожалуйста, заполните все поля");
+      }).validate({
+      focusInvalid: false,
+      sendForm : false,
+      messages: {
+        tf_form_sum: "",
+        tf_form_from: "",
+        tf_form_to: ""
+      },
+      errorPlacement: function(error, element) {
+        //element.parents(".input-wrapper").addClass("input-wrapper-error");
+      },
+      unhighlight: function(element, errorClass, validClass) {
+        //$(element).parents(".input-wrapper").removeClass("input-wrapper-error");
+        $(element).removeClass(errorClass);
+      },
+      invalidHandler: function(form, validator) {
+          var errors = validator.numberOfInvalids();
+          if (errors) {                    
+              validator.errorList[0].element.focus();
+          }
+      } 
+    });
+    
+    $('<input/>').attr({ type: 'hidden', id: 'tf_form_from_val', name: 'tf_form_from_val', 'value' : 0}).insertAfter($("#tf_form_from"));
+    $("#tf_form_from").bind('change', function(){
+      $(this).next().val('0');
+    })
+
+    
+    $('<input/>').attr({ type: 'hidden', id: 'tf_form_to_val', name: 'tf_form_to_val', 'value' : 0}).insertAfter($("#tf_form_to"));
+    $("#tf_form_to").bind('change', function(){$(this).next().val('0')})
+
+    
+    $('<input/>').attr({ type: 'hidden', id: 'tf_form_country_val', name: 'tf_form_country_val', 'value' : 0}).insertAfter($("#tf_form_country"));
+    $("#tf_form_country").bind('change', function(){$(this).next().val('0')})
+
+    $("#tf_form_sum").rules("add", { regex: "^[0-9\\s]+ р.$" });
+
+    $("#formRus").submit(function() {
+    
+      if( $('#tf_form_from_val').val() == 0){
+        $("#tf_form_from").val('').addClass('error');
+        //$("#tf_form_from").prev(".placeholder").show();
+      };
+      if( $('#tf_form_to_val').val() == 0){
+        $("#tf_form_to").val('').addClass('error');;
+        //$("#tf_form_to").prev(".placeholder").show();
+      };
+    
+      if ($("#formRus").valid()) {
+        $("#formRus").append("<div class='loader' />");
+        $.ajax().done(function() {
+        
+          if (!transfers) {
+            alert('Произошла техническая ошибка. Попробуйте перегрузить страницу.');
+          }
+        
+          /* .Submit message */
+          $(".loader").remove();
+          $(".transfers-offers").remove();
+          
+          var transferSum = $("#tf_form_sum").val().replace(" р.","");
+          
+          transferSum = parseFloat(transferSum.replace(/ /g,''));
+
+          var transferType = $("[name='tf-type']:checked").val();
+          
+          if (transferType == 1) {
+            transferType = "Нал"
+          } else if (transferType == 2) {
+            transferType = "Безнал"
+          }
+          
+          var transfersResult = new Array();
+          
+          for (i=0;i<transfers.length;i++) {
+            if (transfers[i][0] == "РФ" && transfers[i][1] == transferType) {
+              transfersResult.push(transfers[i]);
+            }
+          }
+          
+          $("#formRus").parents(".transfer-descr-wrapper").parents(".fc").after("<div class='transfers-offers'></div>");
+          
+          $(".transfers-offers").append("<h2>Вам подходит</h2>");
+          $(".transfers-offers").append("<div class='offers-list fc'>");
+          
+          for (i=0;i<transfersResult.length;i++) {
+            if (transfersResult[i][1] == "Нал") {
+              trFrom = "Наличные";
+              var link = "nal_rus";
+            }
+            if (transfersResult[i][1] == "Безнал") {
+              trFrom = "Безнал.";
+              var link = "beznal_rus"
+            }
+            if (transfersResult[i][2] == "Счет") trTo = "На счет";
+            if (transfersResult[i][2] == "Карта") trTo = "На карту";
+            if (transfersResult[i][2] == "Нал") trTo = "Наличные";
+            
+            var timeArr = transfersResult[i][4].split(" ");
+            
+            if (timeArr[1] == "день" || timeArr[1] == "дней" || timeArr[1] == "дня") {
+              var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
+              if(num==0) units = "дней"; 
+              if(num==1) units = "дня";
+              if(num==2) units = "дней";
+              if(num==3) units = "дней";
+              if(num==4) units = "дней";
+              if(num>=5) units = "дней";
+              if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "дней"
+            }
+            
+            if (timeArr[1] == "час" || timeArr[1] == "часов" || timeArr[1] == "часа") {
+              var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
+              if(num==0) units = "часов"; 
+              if(num==1) units = "часа";
+              if(num==2) units = "часов";
+              if(num==3) units = "часов";
+              if(num==4) units = "часов";
+              if(num>=5) units = "часов";
+              if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "часов"
+            }
+            
+            if (timeArr[1] == "минута" || timeArr[1] == "минут" || timeArr[1] == "минуты") {
+              var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
+              if(num==0) units = "минут"; 
+              if(num==1) units = "минута";
+              if(num==2) units = "минуты";
+              if(num==3) units = "минуты";
+              if(num==4) units = "минуты";
+              if(num>=5) units = "минут";
+              if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "минут"
+            }
+              
+              
+            if (transfersResult[i][2] != "Колибри" && transfersResult[i][2] != "Маниграмм") {
+              timeTtl = "Время перевода"
+            } else {
+              timeTtl = "Срочный перевод";
+            }
+            
+            timeVal = "<div class='offer-data'>до <span>" + timeArr[0] + "</span> " + units + "</div>";
+            
+            if (transfersResult[i][2] != "Колибри") {
+              trMethod = trFrom + " <span class='sep'><img src='../../../../common/img/uploaded/transfers/img/orange-rarr.png' /></span> " + trTo;
+            } else {
+              var link = "colibri#russia"
+              trMethod = "<img src='../../../../common/img/uploaded/transfers/img/ico-colibri.png' class='ico'/> Перевод Колибри"
+            }
+            
+            var comMin = parseInt(transfersResult[i][6]);
+            var comMax = parseInt(transfersResult[i][7]);
+            var comVal = transferSum*parseFloat(transfersResult[i][5].replace(",","\."))/100;
+            
+            if (comVal < comMin) {
+              comVal = comMin
+            }
+            
+            if (comVal > comMax) {
+              comVal = comMax
+            }
+            
+            comVal = comVal + "";
+            
+            var comArr = comVal.split("\.");
+            
+            comInt = comArr[0];
+            comFloat = comArr[1];
+            
+            if (comFloat) {
+              if (comFloat<10) comFloat = comFloat*10;
+              var comString = "<div class='offer-data'><span>" + comInt +",</span><span class='sup'>" + comFloat + "</span> р.</div>"
+            } else {
+              var comString = "<div class='offer-data'><span>" + comInt +"</span> р.</div>"
+            }
+
+            
+            
+            $(".tab-content[rel='russia']").find(".offers-list").append("<div class='item' />");
+            var item = $(".tab-content[rel='russia']").find(".offers-list .item").eq(i);
+            
+            item.append("<div class='ttl'>" + trMethod + "</div>")
+            
+            item.append("<div class='descr' />");
+            
+            item.find(".descr").append("<table></table>");
+            
+            item.find(".descr table").append("<tr><td>" + timeTtl + "</td><td>" + timeVal + "</td></tr>");
+            item.find(".descr table").append("<tr><td>Комиссия</td><td>" + comString + "</td></tr>");
+            item.find(".descr").append("<a class='button button-2' href='" + link +"' target='_blank'><span>Подробнее</span></a>");
+            
+          }
+          
+        });
+        
+      }
+    
+      return false;
+    
+    });
+    
+    var validator2 = $("#formInt").bind("invalid-form.validate", function() {
+        $("#summary").html("Пожалуйста, заполните все поля");
+      }).validate({
+      sendForm : false,
+      focusInvalid: false,
+      messages: {
+        tf_form_sum_int: "",
+        tf_form_country: "Укажите страну"
+      },
+      errorPlacement: function(error, element) {
+        //element.parents(".input-wrapper").addClass("input-wrapper-error");
+      },
+      unhighlight: function(element, errorClass, validClass) {
+        //$(element).parents(".input-wrapper").removeClass("input-wrapper-error");
+        $(element).removeClass(errorClass);
+      },
+      invalidHandler: function(form, validator) {
+          var errors = validator.numberOfInvalids();
+          if (errors) {                    
+              validator.errorList[0].element.focus();
+          }
+      } 
+    });
+    
+    $("#tf_form_sum_int").rules("add", { regex: "^[0-9\\s]+$" });
+    
+    $("#formInt").submit(function() {
+      if( $('#tf_form_country_val').val() == 0){
+      $("#tf_form_country").val('').focus();
+      //$("#tf_form_country").prev(".placeholder").show();
+    };
+    
+      if ($("#formInt").valid()) {
+      
+        $("#formInt").append("<div class='loader' />");
+        $.ajax().done(function() {
+        
+          if (!transfers) {
+            alert('Произошла техническая ошибка. Попробуйте перегрузить страницу.')
+          }
+        
+          /* .Submit message */
+          $(".loader").remove();
+          $(".transfers-offers").remove();
+          
+          var transferSum = $("#tf_form_sum_int").val();
+          
+          transferSum = parseFloat(transferSum.replace(/ /g,''));
+          
+          
+          var transferType = $("[name='tf-type-int']:checked").val();
+          
+          if (transferType == 1) {
+            transferType = "Нал"
+          } else if (transferType == 2) {
+            transferType = "Безнал"
+          }
+
+          var transferCurr = $("[name='tf-curr']:checked").val();
+          
+          if (transferCurr == 1) {
+            transferCurr = "Рубли";
+            trUnits = "р."
+          } else if (transferCurr == 2) {
+            transferCurr = "Доллары"
+            trUnits = "$"
+          } else if (transferCurr == 3) {
+            transferCurr = "Евро"
+            trUnits = "€"
+          }
+          
+          var transfersResult = new Array();
+          
+          for (i=0;i<transfers.length;i++) {
+            if (transfers[i][2] != "Колибри") {
+              if (transfers[i][0] == "Международный" && transfers[i][1] == transferType && transfers[i][3] == transferCurr) {
+                transfersResult.push(transfers[i]);
+              }
+            } else {
+              if (transfers[i][1] == "Нал" && ($("#tf_form_country").val().toLowerCase() == "беларусь" || $("#tf_form_country").val().toLowerCase() == "украина" || $("#tf_form_country").val().toLowerCase() == "казахстан") && transfers[i][0] == "Международный" && transfers[i][1] == transferType && transfers[i][3] == transferCurr) {
+                transfersResult.push(transfers[i]);
+              }
+            }
+            
+          }
+          
+          $("#formInt").parents(".transfer-descr-wrapper").parents(".fc").after("<div class='transfers-offers'></div>");
+          
+          $(".transfers-offers").append("<h2>Вам подходит</h2>");
+          $(".transfers-offers").append("<div class='offers-list fc'>");
+          
+          for (i=0;i<transfersResult.length;i++) {
+            if (transfersResult[i][1] == "Нал") {
+              trFrom = "Наличные";
+              var link = "nal_int";
+            }
+            if (transfersResult[i][1] == "Безнал") {
+              trFrom = "Безнал.";
+              var link = "beznal_int"
+            }
+            if (transfersResult[i][2] == "Счет") trTo = "На счет";
+            if (transfersResult[i][2] == "Карта") trTo = "На карту";
+            if (transfersResult[i][2] == "Нал") trTo = "Наличные";
+            
+            
+            var timeArr = transfersResult[i][4].split(" ");
+            
+            if (timeArr[1] == "день" || timeArr[1] == "дней" || timeArr[1] == "дня") {
+              var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
+              if(num==0) units = "дней"; 
+              if(num==1) units = "дня";
+              if(num==2) units = "дней";
+              if(num==3) units = "дней";
+              if(num==4) units = "дней";
+              if(num>=5) units = "дней";
+              if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "дней"
+            }
+            
+            if (timeArr[1] == "час" || timeArr[1] == "часов" || timeArr[1] == "часа") {
+              var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
+              if(num==0) units = "часов"; 
+              if(num==1) units = "часа";
+              if(num==2) units = "часов";
+              if(num==3) units = "часов";
+              if(num==4) units = "часов";
+              if(num>=5) units = "часов";
+              if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "часов"
+            }
+            
+            if (timeArr[1] == "минута" || timeArr[1] == "минут" || timeArr[1] == "минуты") {
+              var num = timeArr[0].slice(timeArr[0].length-1,timeArr[0].length); 
+              if(num==0) units = "минут"; 
+              if(num==1) units = "минута";
+              if(num==2) units = "минуты";
+              if(num==3) units = "минуты";
+              if(num==4) units = "минуты";
+              if(num>=5) units = "минут";
+              if(timeArr[0].slice(timeArr[0].length-2,timeArr[0].length) == 11) units = "минут"
+            }
+              
+              
+            if (transfersResult[i][2] != "Колибри" && transfersResult[i][2] != "Маниграмм") {
+              timeTtl = "Время перевода"
+            } else {
+              timeTtl = "Срочный перевод";
+            }
+            
+            timeVal = "<div class='offer-data'>до <span>" + timeArr[0] + "</span> " + units + "</div>";
+            
+            if (transfersResult[i][2] != "Колибри" && transfersResult[i][2] != "Маниграмм") {
+              trMethod = trFrom + " <span class='sep'><img src='../../../../common/img/uploaded/transfers/img/orange-rarr.png' /></span> " + trTo;
+            } else if (transfersResult[i][2] == "Колибри") {
+              var link = "colibri#international"
+              trMethod = "<img src='../../../../common/img/uploaded/transfers/img/ico-colibri.png' class='ico'/> Перевод Колибри"
+            } else if (transfersResult[i][2] == "Маниграмм") {
+              var link = "moneygram_int"
+              trMethod = "<img src='../../../../common/img/uploaded/transfers/img/ico-moneygram.png' class='ico'/> Перевод MoneyGram"
+            }
+            
+            var comMin = parseInt(transfersResult[i][6]);
+            var comMax = parseInt(transfersResult[i][7]);
+            var comVal = transferSum*parseFloat(transfersResult[i][5].replace(",","\."))/100;
+            
+            if (comVal < comMin) {
+              comVal = comMin
+            }
+            
+            if (comVal > comMax) {
+              comVal = comMax
+            }
+            
+            comVal = comVal + "";
+            
+            var comArr = comVal.split("\.");
+            
+            comInt = comArr[0];
+            comFloat = comArr[1];
+            
+            if (comFloat) {
+              if (comFloat<10) comFloat = comFloat*10;
+              var comString = "<div class='offer-data'><span>" + comInt +",</span><span class='sup'>" + comFloat + "</span> " + trUnits + "</div>"
+            } else {
+              var comString = "<div class='offer-data'><span>" + comInt +"</span> " + trUnits + "</div>"
+            }
+            
+            if (transfersResult[i][2] == "Маниграмм") {
+              var comString = "<div class='offer-data'>от <span>2</span> долларов</div>"
+            }
+            
+            
+            $(".tab-content[rel='international']").find(".offers-list").append("<div class='item' />");
+            var item = $(".tab-content[rel='international']").find(".offers-list .item").eq(i);
+            
+            item.append("<div class='ttl'>" + trMethod + "</div>")
+            
+            item.append("<div class='descr' />");
+            
+            item.find(".descr").append("<table></table>");
+            
+            item.find(".descr table").append("<tr><td>" + timeTtl + "</td><td>" + timeVal + "</td></tr>");
+            item.find(".descr table").append("<tr><td>Комиссия</td><td>" + comString + "</td></tr>");
+            item.find(".descr").append("<a class='button button-2' href='" + link +"' target='_blank'><span>Подробнее</span></a>");
+            
+          }
+          
+        });
+        
+      }
+      
+      return false;
+    });
+    
+    
+
+    $.validator.addMethod(
+      "regex",
+      function(value, element, regexp) {
+          var re = new RegExp(regexp);
+          return this.optional(element) || re.test(value);
+      },
+      "Please check your input."
+    );
+
+    $(".transfer-form").show();
+  
+  }  
+	
+  
   
 });
 
