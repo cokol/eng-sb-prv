@@ -1,0 +1,150 @@
+.compare_table {
+	background:url(../img/tabclass/th-bg.gif) repeat-x scroll 0 0 transparent;
+	border-bottom:10px solid #96C832;
+	font-family:Arial;
+	font-size:12px;
+	width:100%;
+}
+.compare_table th.f {
+	background:url(../img/tabclass/th-l.gif) no-repeat scroll 0 0 transparent;
+}
+.compare_table th {
+	color:#FFFFFF;
+	font-weight:normal;
+	height:38px;
+	padding:0 10px 0 10px;
+	text-align:left;
+	/*text-transform:uppercase;*/
+	vertical-align:middle;
+	white-space:nowrap;
+}
+.compare_table th.l {
+	background:url(../img/tabclass/th-r.gif) no-repeat scroll 100% 0 transparent;
+}
+.compare_table .mainrow td {
+	background:url(../img/tabclass/td-bg.gif) repeat-x scroll 0 0 #F5F5F5;
+	color:#000000;
+	font-size:18px;
+	vertical-align:middle;
+	padding:25px 0 0px 17px;
+}
+.compare_table td a {
+	color:#005826;
+	font-size:14px;
+	/*text-transform:uppercase;*/
+}
+.compare_table td span {
+	color:#666666;
+	font-size:12px;
+}
+.compare_table .right_div0{
+border-top:4px solid #2e861f;
+}
+.compare_table .right_div4{
+padding-right:29px!important;
+}
+.compare_table .empty_tab, .compare_table .tab {
+	background-color:#F5F5F5;
+	vertical-align:bottom;
+}
+.compare_table .tab td {
+	vertical-align:middle;
+	cursor:pointer;
+}
+.compare_table .tab .left{
+	background:url(../img/compare_table/active_tab_left.gif) no-repeat #F5F5F5;
+	width:8px;
+	height:24px;
+}
+.compare_table .tab .center{
+	background:url(../img/compare_table/active_tab_center.gif) repeat-x;
+	color:#FFFFFF;
+	font-size:12px;
+	text-align:center;
+}
+.compare_table .tab .right{
+	background:url(../img/compare_table/active_tab_right.gif) no-repeat #F5F5F5;
+	width:9px;
+}
+.compare_table .inactive .left{
+	background:url(../img/compare_table/inactive_tab_left.gif) no-repeat #F5F5F5;
+}
+.compare_table .inactive .center{
+	background:url(../img/compare_table/inactive_tab_center.gif) repeat-x;
+}
+.compare_table .inactive .right{
+	background:url(../img/compare_table/inactive_tab_right.gif) no-repeat #F5F5F5;
+}
+
+.compare_table .inactive:hover .left{
+	background:url(../img/compare_table/active_tab_left.gif) no-repeat #F5F5F5;
+}
+.compare_table .inactive:hover .center{
+	background:url(../img/compare_table/active_tab_center.gif) repeat-x;
+}
+.compare_table .inactive:hover .right{
+	background:url(../img/compare_table/active_tab_right.gif) no-repeat #F5F5F5;
+}
+
+.compare_table .empty_tab .right_div0{
+	border-top:4px solid #2e861f
+}
+.big_table_box td{
+	font-size:12px!important;
+}
+
+.big_table_calc td{
+	vertical-align:top!important;
+}
+.big_table_calc .gtitle{
+	color:#84bd2c;
+	font-size:12px;
+	border-bottom:0;
+}
+.big_table_calc, .btitle{
+	color:#262626;
+	font-size:12px;
+	border-bottom:0!important;
+}
+.big_table_calc .stitle{
+	color:#1e6a26;
+	font-size:10px!important;
+}
+.big_table_calc td{
+	padding:2px 0 5px 5px!important;
+	border-bottom:1px solid #eeebe2;
+}
+.big_table_calc .firstrow{
+	border-bottom:2px solid #99CC33;
+	font-size:0px!important;
+	height:0;
+}
+.big_table_calc .firstcol{
+	background:#f8f6f2;
+}
+.big_table_calc .greenHborder{
+	border-bottom:2px solid #99CC33!important;
+}
+.big_table_calc .grayHborder{
+	border-bottom:2px solid #c3c3c3!important;
+}
+.big_table_calc .grayVborder{
+	border-left:2px solid #c3c3c3;
+	border-bottom:0;
+}
+.big_table_calc .graySHborder{
+	border-bottom:1px solid #eeebe2;
+}
+.big_table_calc .graySVborder{
+	border-left:1px solid #eeebe2;
+	border-bottom:0;
+}
+.noborbot{
+	border-bottom:0px!important;
+}
+.compare_table .right_div3{
+	background:url(../img/table/left_col/dop_blok_5_bg.jpg) no-repeat scroll left bottom transparent!important;
+}
+.compare_table .right_div4 {
+	background:url(../img/table/left_col/dop_blok_6_bg.jpg) no-repeat scroll right bottom transparent!important;
+}

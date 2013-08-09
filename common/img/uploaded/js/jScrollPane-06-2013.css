@@ -1,0 +1,84 @@
+
+.jScrollPaneContainer, .jspScrollable {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+.jspPane{
+	margin-left:0!important;
+	overflow: visible; 
+	height: auto; 
+	width: 195px!important;
+	padding-right: 5px; 
+	position: absolute; 
+	top: -26px;
+}
+.jScrollPaneTrack, .jspTrack {
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+	height: 100%;
+	background-color:#F1EDE5;
+	border:1px solid #b5b1a6;
+	width:13px!important;
+	height:230px;
+	top: 15px;
+}
+.jScrollPaneDrag, .jspDrag {
+	position: absolute;
+	/*background: #666;*/
+	background:url(../../../css/ui-lightness/images/scrl_but.jpg) no-repeat left top;  
+	cursor: pointer;
+	overflow: hidden;
+	width:13px!important;
+	height:12px!important;
+}
+.jScrollPaneDragTop, .jspDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.jScrollPaneDragBottom, .jspDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+a.jScrollArrowUp, a.jspArrowUp {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	text-indent: -2000px;
+	overflow: hidden;
+	/*background-color: #666;*/
+	background:url(../../../css/ui-lightness/images/scrl_up.jpg) no-repeat center top;
+	height: 15px;
+	width:15px!important;
+}
+a.jScrollArrowUp:hover, a.jspArrowUp:hover {
+	/*background-color: #f60;*/
+}
+
+a.jScrollArrowDown, a.jspArrowDown {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	right: 0;
+	text-indent: -2000px;
+	overflow: hidden;
+	/*background-color: #666;*/
+	background:url(../../../css/ui-lightness/images/scrl_down.jpg) no-repeat center top;
+	height: 15px;
+	width:15px!important;
+}
+a.jScrollArrowDown:hover, a.jspArrowDown:hover {
+	/*background-color: #f60;*/
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover,  {
+	/*background-color: #f00;*/
+}

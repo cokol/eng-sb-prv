@@ -1,0 +1,901 @@
+.contright2 a, .right_div4 a {color: #006699;}
+
+.right_div4 {color: #666666; font-size: 1.2em;}
+
+.contright2, .contright2 p {color: #666666; font-size: 1em;}
+
+div.spacer {
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: transparent;
+    border: none;
+    display: block;
+    visibility: hidden;
+}
+
+.contright2 p, .right_div4 p {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+
+/* Лента новостей */
+.newslist .listf, .newslist .list {
+  margin: 0px 0px 9px 0px;
+}
+.newslist .listf h3, .newslist .list h3 {
+  margin: 0px 0px 0px 23px;
+  padding: 0px;
+  border: 0px;
+  display:block;
+}
+.newslist .listf h3 a, .newslist .list h3 a {
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+  border: 0px;
+  color: #666666;
+  font-weight: normal;
+}
+.newslist .listf .data, .newslist .list .data {
+  font-size: 12px;
+  color: #005b7f;
+  display:block;
+  padding: 6px 0px 6px 3px;
+  margin: 0px;  
+  line-height: normal;  
+  border-bottom: 1px solid #e8e5e0;
+}
+.zagtabnews {
+  width: 100%;
+}
+
+/* Листалка */
+.sub-links2 ul.pagers, .left .contright2 .sub-links2 ul.pagers {
+  margin: 16px 0px 23px 0px;
+}
+.sub-links2 ul.pagers li, .left .contright2 .sub-links2 ul.pagers li {
+  font-size: 12px;
+  background: none;
+  display: inline;
+  list-style-image: none;
+  list-style-type: none;
+  padding: 0px 9px 0px 9px;
+  margin: 0px 0px 0px 0px;
+}
+.sub-links2 ul.pagers li.first, .left .contright2 .sub-links2 ul.pagers li.first {
+  padding: 0px 15px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  background: none;
+  list-style-image: none;
+  list-style-type: none;
+}
+.sub-links2 ul.pagers li.first img, .left .contright2 .sub-links2 ul.pagers li.first img {
+  vertical-align: middle;
+  background: none;
+  list-style-image: none;
+  list-style-type: none;
+}
+.sub-links2 ul.pagers li.last, .left .contright2 .sub-links2 ul.pagers li.last {
+  padding: 0px 0px 0px 15px;
+  margin: 0px 0px 0px 0px;
+  background: none;
+  list-style-image: none;
+  list-style-type: none;
+}
+.sub-links2 ul.pagers li.last img, .left .contright2 .sub-links2 ul.pagers li.last img {
+  vertical-align: middle;
+  background: none;
+  list-style-image: none;
+  list-style-type: none;
+}
+
+/*листалка списка*/
+.pad-faq ul.pager {
+  margin: 16px 0px 23px 0px;
+}
+.pad-faq ul.pager li {
+  font-size: 12px;
+  background: none;
+  display: inline;
+  list-style-image: none;
+  list-style-type: none;
+  padding: 0px 9px 0px 9px;
+  margin: 0px 0px 0px 0px;
+}
+.pad-faq ul.pager li.first {
+  padding: 0px 15px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.pad-faq ul.pager li.first img {
+  vertical-align: middle;
+}
+.pad-faq ul.pager li.last {
+  padding: 0px 0px 0px 15px;
+  margin: 0px 0px 0px 0px;
+}
+.pad-faq ul.pager li.last img {
+  vertical-align: middle;
+}
+
+/*списки*/
+.contright2 ul li,
+.contright2 td.left ul li {
+  padding: 1px 0px 0px 19px;
+  margin: 0px 0px 14px 0px;
+  list-style-image: none;
+  list-style-type: none;
+  background: url(../ibank/img/bul/li3.gif) no-repeat 0px 8px;
+}
+.right_div4 ul li,
+.right_div4 td.left ul li, 
+.calk2  ul li {
+  padding: 1px 0px 0px 19px;
+  margin: 0px 0px 14px 0px;
+  list-style-image: none;
+  list-style-type: none;
+  background: url(../ibank/img/bul/li3_2.gif) no-repeat 0px 8px;
+}
+.contright2 ul, .right_div4 ul {
+    margin: 10px 0 10px 0px;
+    padding: 0 0 0 0;
+}
+.contright2 ul li, .right_div4 ul li {
+    margin: 2px 0 5px 0;
+    padding-left: 25px;
+}
+.contright2 ol {
+    margin-left: 33px;
+}
+.contright2 ol li {
+    padding: 2px 0 5px 0px;
+}
+
+.contright2 td.right table.text ul.docs, ul.docs, .contright2 td.left2 table.text ul.docs li {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.contright2 td.right table.text ul.docs li,
+ul.docs li,
+.contright2 .right2 .docs li,
+.contright2 .cbord2 .openclose .listr ul.docs li,
+.contright2 .right2 ul li .docs li,
+.contright2 .left ul.docs li, .contright2 td.left2 table.text ul.docs li,
+.r_g_col5 ul.docs li {
+  padding: 1px 0px 4px 19px;
+  margin: 0px 0px 0px 0px;
+  list-style-image: none;
+  list-style-type: none;
+  background: url(../ibank/img/bul/pdf.gif) no-repeat 0px 2px;
+/*  line-height: 1.2em; */
+}
+.contright2 td.left ul.zip li, .contright2 td.left ul.zip li {
+  background: url(../ibank/img/bul/zip1.gif) no-repeat 0px 2px;
+  padding-left: 19px;
+  margin: 0px 0px 4px 0px;
+  font-size: 1em;
+}
+.contright2 td.right table.text td.pad ul.doc li.zip, .contright2 td.right table.text td.pad ul li.zip, .r_g_col5 td.right table.text td.pad ul li.zip {
+  background: url(../ibank/img/bul/zip1.gif) no-repeat 0px 2px;
+  padding-left: 19px;
+  margin: 0px 0px 4px 0px;
+}
+.contright2 ul.docs li.zip, .r_g_col5 ul.docs li.zip, .dop_blok_6 ul.docs li.zip, .right_div4  ul.docs li.zip {
+  background: url(../ibank/img/bul/zip1.gif) no-repeat 0px 2px;
+  padding-left: 19px;
+  margin: 0px 0px 4px 0px;
+}
+.contright2 td.left ul li.zip, .r_g_col5 td.left ul li.zip {
+  background: url(../ibank/img/bul/zip1.gif) no-repeat 0px 2px;
+  padding-left: 19px;
+  margin: 0px 0px 4px 0px;
+}
+
+.contright2 ul.docs li.rtf, .r_g_col5 ul.docs li.rtf, .dop_blok_6 ul.docs li.rtf, .faq ul.docs li.rtf, .pad-faq ul.docs li.rtf, .cont_table_lb_rm ul.docs li.rtf {
+  background: url(../ibank/img/bul/rtf.gif) no-repeat 0px 2px;
+  padding-left: 19px;
+  margin: 0px 0px 4px 0px;
+}
+
+.contright2 ul.docs li.xls, .r_g_col5 ul.docs li.xls, .dop_blok_6 ul.docs li.xls, .faq ul.docs li.xls {
+  background: url(../ibank/img/bul/xls.gif) no-repeat 0px 2px;
+  padding-left: 19px;
+  margin: 0px 0px 4px 0px;
+}
+
+
+/* Таблицы */
+/* тип 1 */
+.contright2 .tab1 {
+  width: 100%;
+}
+.contright2 .tab1 th:first-child {
+  padding: 6px 0px 15px 0px;
+}
+.contright2 .tab1 th {
+  font-size: 14px;
+  color: #818280;
+  text-align: right;
+  padding: 6px 0px 15px 60px;
+}
+.contright2 .tab1 td:first-child {
+  text-align: left;
+  padding: 16px 0px 15px 0px;
+}
+.contright2 .tab1 td:last-child {
+  padding: 16px 0px 15px 60px;
+}
+.contright2 .tab1 td {
+  font-size: 18px;
+  font-weight: normal;
+  color: #2d2e2c;
+  border-top: 1px solid #f0f2ec;
+  text-align: right;
+  padding: 16px 0px 23px 50px;
+}
+.contright2 .tab1 td a {
+  font-weight: normal;
+/*  font-size: 1.15em; */
+}
+.contright2 .tab1 td span {
+  font-size: 0.65em;
+}
+.contright2 .tab1 .grey {
+  color: #B4B6B3;
+}
+.contright2 .tab1 tr td div.prim, .right_div4 div.prim {
+  font-size: 10px;
+  color: #b5b7b2;
+}
+.contright2 .tab1 tr.hidden td {
+	color: #B4B6B3;
+}
+.contright2 .tab1 tr.hidden td a {
+	color: #B4B6B3;
+}
+
+/* тип 2 */
+.tab2 {
+  width: 100%;
+  margin-top: 10px;
+}
+/*.contright2 .tab2 th:first-child {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+  color: #197b30;
+  padding: 6px 0px 12px 0px;
+}*/
+.tab2 th {
+  font-size: 11px;
+  font-weight: normal;
+  color: #197b30;
+  padding: 11px 0px 12px 0px;
+  margin:0px;
+  text-align:left;
+}
+/*.contright2 .tab2 tr td:first-child {
+  text-align: left;
+  padding: 11px 20px 12px 0px;
+}
+.contright2 .tab2 td:last-child {
+  padding: 11px 0px 12px 10px;
+}
+.contright2 .tab2 tr:first-child td {
+  font-size: 14px;
+  color: #2d2e2c;
+  border-top: 0px solid #f0f2ec;
+  font-weight: normal;
+  padding-top: 0px;
+}
+.contright2 .tab2 tr:first-child td:first-child {
+  width: 168px;
+}*/
+.tab2 tr td {
+  font-size: 12px;
+  color: #666666;
+  border-top: 1px solid #f0f2ec;
+  padding: 11px 0px 12px 0px;
+  font-weight: normal;
+}
+.tab2 tr td div.prim {
+  font-size: 10px;
+  color: #b5b7b2;
+}
+.tab2 td b, .tab2 td strong {
+  font-size: 14px;
+  color: #757872;
+  padding-right: 8px;
+}
+.tab2 td span {
+  color: #b5b7b2;
+  clear: both;
+  display: block;
+}
+.tab2 td p {
+  margin: 0px 0px 7px 0px;
+}
+/* тип 2 .contright2  */
+.contright2 .tab2 {
+  width: 100%;
+  margin-top: 10px;
+}
+.contright2 .tab2 th, .contright2 .tab2 th p strong {
+  font-size: 12px;
+  color: #006633;
+  padding: 11px 0px 12px 0px;
+  margin:0px;
+  text-align:left;
+}
+.contright2 .tab2 tr td {
+  font-size: 12px;
+  color: #666666;
+  border-top: 1px solid #f0f2ec;
+  padding: 11px 8px 12px 0px;
+}
+.contright2 .tab2 tr td div.prim {
+  font-size: 10px;
+  color: #b5b7b2;
+}
+.contright2 .tab2 td p b, .contright2 .tab2 td p strong, .contright2 .pad .tab2 td p strong {
+  font-size: 13px;
+  font-weight:bold;
+  color: #757872;
+  padding-right: 8px;
+  text-transform:none;
+}
+.contright2 .tab2 td span {
+  color: #b5b7b2;
+  clear: both;
+  display: block;
+}
+.contright2 .tab2 td p {
+  margin: 0px 0px 7px 0px;
+}
+/* тип 22 */
+.contright2 .tab22 {
+  width: 100%;
+}
+.contright2 .tab22 th:first-child {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+  color: #2d2e2c;
+  padding: 6px 0px 7px 0px;
+}
+.contright2 .tab22 th {
+  font-size: 12px;
+  font-weight: normal;
+  color: #2d2e2c;
+  padding: 6px 0px 7px 10px;
+}
+.contright2 .tab22 tr td:first-child {
+  text-align: left;
+  padding: 7px 20px 7px 0px;
+}
+.contright2 .tab22 td:last-child {
+  padding: 7px 0px 7px 10px;
+}
+.contright2 .tab22 tr:first-child td {
+  font-size: 12px;
+  color: #2d2e2c;
+  border-top: 0px solid #f0f2ec;
+  font-weight: normal;
+  padding-top: 0px;
+}
+.contright2 .tab22 tr:first-child td:first-child {
+  width: 168px;
+}
+.contright2 .tab22 tr td {
+  font-size: 12px;
+  color: #2d2e2c;
+/*  border-top: 1px solid #f0f2ec; */
+  padding: 7px 0px 7px 0px;
+  font-weight: normal;
+}
+.contright2 .tab22 tr td div.prim {
+  font-size: 10px;
+  color: #b5b7b2;
+}
+.contright2 table.text .pad .tab22 td p b, .contright2 table.text .pad .tab22 td p strong {
+  font-size: 12px;
+  color: #757872;
+  text-transform:none;
+}
+/*
+.tab2 td a {
+  font-weight: bold;
+  font-size: 0.95em;
+}
+ */
+.contright2 .tab22 td span {
+  color: #b5b7b2;
+  clear: both;
+  display: block;
+}
+.contright2 .tab22 td p {
+  margin: 0px 0px 7px 0px;
+}
+
+/* тип 3 */
+.contright2 .tab3, .right_div4 .tab3 {
+  width: 100%;
+}
+.contright2 .tab3 th, .right_div4 .tab3 th {
+  font-size: 14px;
+  color: #757872;
+  text-align: left;
+  padding: 4px 4px 10px 7px;
+}
+.contright2 .tab3 tr:first-child th, .right_div4 .tab3 tr:first-child th {
+  padding-top: 0px;
+}
+.contright2 .tab3 tr td, .right_div4 .tab3 tr td {
+  color: #666666;
+  font-weight: bold;
+  padding: 5px 4px 13px 7px;
+}
+.contright2 .tab3 td dt, .right_div4 .tab3 td dt {
+  color: #2d2e2c;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  padding: 3px 0px 0px 0px;
+}
+
+.contright2 .tab3 td span {
+  color: #2d2e2c;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.contright2 .tab3 th, .contright2 .tab3 td {
+  border-bottom: 1px solid #f0f2ec;
+}
+.contright2 .tab3 th.noborder {
+  border-bottom: 0px solid #f0f2ec;
+  padding: 4px 4px 10px 7px;
+}
+.contright2 .tab3 td.noborder {
+  border-bottom: 0px solid #f0f2ec;
+  padding: 5px 4px 4px 7px;
+}
+.contright2 .tab3 tr.topborder th, .contright2 .tab3 tr.topborder td {
+  padding-top: 8px;
+}
+
+/* тип 4 */
+.contright2 .tab4 {
+  width: 100%;
+}
+.contright2 .tab4 th {
+  font-size: 14px;
+  color: #818280;
+  text-align: left;
+  padding: 6px 0px 15px 25px;
+}
+.contright2 .tab4 tr:first-child td {
+   border-top: 0px solid #f0f2ec;
+}
+.contright2 .tab4 tr:first-child td:first-child {
+   width: 199px;
+}
+.contright2 .tab4 td:first-child {
+   padding: 16px 0px 23px 0px;
+}
+.contright2 .tab4 td {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+  color: #2d2e2c;
+  border-top: 1px solid #f0f2ec;
+  padding: 16px 0px 23px 25px;
+}
+.contright2 .tab4 td a {
+  font-weight: normal;
+  font-size: 18px;
+/*  font-size: 1.15em; */
+}
+.contright2 .tab4 td span {
+  font-size: 0.65em;
+}
+.contright2 .tab4 .grey {
+  color: #B4B6B3;
+}
+
+/* тип 5 */
+.contright2 .tab5 {
+  width: 100%;
+  margin: 25px 0px 0px 0px;
+}
+.contright2 .tab5 th:first-child {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  color: #2d2e2c;
+  padding: 6px 0px 12px 0px;
+}
+.contright2 .tab5 th {
+  font-size: 14px;
+  font-weight: normal;
+  color: #2d2e2c;
+  padding: 6px 0px 12px 10px;
+}
+.contright2 .tab5 tr td:first-child {
+  text-align: left;
+  padding: 11px 20px 12px 0px;
+}
+.contright2 .tab5 td:last-child {
+  padding: 11px 0px 12px 10px;
+}
+.contright2 .tab5 tr:first-child td {
+  font-size: 14px;
+  color: #2d2e2c;
+  border-top: 0px solid #f0f2ec;
+  font-weight: normal;
+  padding-top: 0px;
+}
+.contright2 .tab5 tr:first-child td:first-child {
+  width: 168px;
+}
+.contright2 .tab5 tr td {
+  font-size: 1em;
+  color: #2d2e2c;
+  padding: 11px 0px 12px 0px;
+  font-weight: normal;
+}
+.contright2 .tab5 tr td div.prim {
+  font-size: 10px;
+  color: #b5b7b2;
+}
+.cbord2 .prim {
+  font-size: 10px;
+  color: #b5b7b2;
+}
+.contright2 .tab5 td b, .contright2 .tab5 td strong {
+  font-size: 14px;
+  color: #757872;
+}
+.contright2 .tab5 td span {
+  color: #b5b7b2;
+  clear: both;
+  display: block;
+}
+.contright2 .tab5 td p {
+  margin: 0px 0px 7px 0px;
+}
+
+/* Форма */
+.tabform {
+  margin: 0px 0px 10px 0px;
+}
+.tabform td {
+  font-size: 11px;
+  color: #666666;
+}
+.tabform td span {
+  font-size: 12px;
+  /*font-weight: bold;*/
+  color: #666666;
+}
+.tabform .td1 {
+  padding: 0px 15px 0px 4px;
+}
+.tabform .td2 {
+  padding: 0px 11px 0px 10px;
+}
+.tabform .td3 {
+  padding: 0px 15px 0px 17px;
+}
+
+
+.contright2 table.text {
+  width: 100%;
+}
+.contright2 table.text .pad, .right_div4 table.text .pad {
+  padding: 4px 25px 4px 25px;
+}
+.contright2 .cbord3 table.text .pad, .right_div4 table.text .pad {
+  padding: 4px 25px 4px 0px;
+}
+.contright2 .cbord3 table.text .pad strong {
+	color: #2d2e2c;
+}
+
+.contright2 table.text, .right_div4 table.text {
+  width: 100%;
+}
+.contright2 table.text .pad, .right_div4 table.text .pad {
+  padding: 4px 25px 4px 25px;
+}
+.contright2 .cbord3 table.text .pad, .right_div4 table.text .pad {
+  padding: 4px 25px 4px 0px;
+}
+
+/*банковская карта*/
+.text .cardquery h3 {
+	font-size: 18px;
+	padding: 0px 0px 30px 0px;
+	display: block;
+	color: #98c630;
+	border-top: solid #ffffff 1px;
+}
+.right_div4 table.text .pad strong {color: #9acc37; text-transform:uppercase; font-weight:normal;}
+.text .cardquery h3 span {font-size: 18px; color: #ff6201; font-weight:bold; border-top: solid 0px; padding: 0px 0px 30px 0px;}
+.text .cardquery h3 span.shag {font-size: 18px; color: #666666; font-weight:bold; border-top: solid 0px; padding: 0px 0px 30px 0px;}
+.card_cbord .text { margin: 5px 0px 17px 0px; }
+.card_cbord .main_param {
+	margin-top: 10px;
+	font-size: 12px;
+	color: #373737;
+}
+.card_cbord .main_param span {
+text-transform:uppercase;
+}
+.card_cbord .main_param td { padding: 2px 50px 2px 0; }
+.gray { color: #bebebd; }
+.card_table { margin-top: 20px; margin-left: 0px; }
+.card_table th { padding: 0 15px 20px 0 ; }
+.card_table td { padding: 0 0 20px 0 ; }
+.card_table th {
+	color: #757872;
+	padding-top: 3px;
+}
+.card_table b { color: #757872; }
+.card_table th span { color: #9acc37; }
+.cursor { cursor:pointer; }
+.radiotable { margin: 0; }
+.radiotable td {
+	padding: 0 10px 0 0;
+	vertical-align: middle;
+}
+.card_result {
+	font-size:12px;
+	color: #757872;
+}
+.card_result th {
+	border-bottom: 1px solid #f0f2ec;
+	padding: 20px 20px 20px 0;
+	font-size:14px;
+	font-weight: normal;
+	color: #9acc37;
+	text-align:left;
+}
+.card_result td {
+	border-bottom: 1px solid #f0f2ec;
+	padding: 8px 0 8px 0;
+}
+.cardquery input,
+.cardquery select,
+.cardquery texarea {
+	font-size: 12px;
+	font-family: Arial;
+	color: #757872;
+}
+.cardquery input { padding: 1px 0 1px 0; }
+.cardquery .wide_select { width: 300px; }
+.cardquery .field {  width: 225px; }
+.cardquery .std_select {  width: 229px; }
+.cardquery .day_select {  width: 50px; }
+.cardquery .month_select {  width: 100px; }
+.cardquery .year_select {  width: 60px; }
+.cardquery .telefone_prefix {  width: 55px; }
+.cardquery .telefone_field {  width: 125px; }
+.cardquery .doc_num { width: 105px; }
+.about_pager {
+	width: 100%;
+}
+.about_pager th {
+	text-align:left;
+	padding-left: 30px;
+}
+.about_pager td {
+	text-align:right;
+}
+.about_pager span { color: #bebebd;}
+
+/* Список без перезагрузки */
+.listl {
+  /*width: 163px;*/
+ /* width: 100px; */
+  padding: 0px 35px 0px 0px;
+}
+.listl div {
+  margin: 0px 0px 11px 0px;
+}
+div.sel {
+  color: #666666;
+  font-weight: bold;
+  font-size: 12px;
+}
+div.unsel {
+  color: #666666;
+  font-size: 12px;
+  cursor: pointer;
+}
+div.unsel span {
+  border-bottom: 1px dashed #666666;
+}
+
+/* Отступы в открывающихся блоках слева */
+.contright2 td.left .cbord3 table.text .pad-op {
+  padding: 0px 23px 0px 31px;
+}
+.contright2 td.left .cbord2 table.text .pad-op {
+  padding: 0px 13px 0px 20px;
+}
+/* Отступы в открывающихся блоках справа */
+.contright2 td.right .cbord3 table.text .pad-op {
+  padding: 0px 23px 0px 31px;
+}
+.contright2 td.right .cbord2 table.text .pad-op {
+  padding: 0px 13px 0px 20px;
+}
+
+/* левый блок */
+.dop_blok_6 .anews table.rates {
+ margin: 0;
+ padding: 0;
+}
+.dop_blok_6 .anews .rates td {
+ padding: 1px 15px 1px 0px;
+ margin: 0px 0px 0px 0px;
+ color: #666666;
+}
+.dop_blok_6 .anews .rates th {
+ padding: 0px 0px 0px 0px;
+ font-size: 10px;
+ color: #d3d4d1;
+ text-align: left;
+}
+.dop_blok_6 .anews p {
+ padding: 0px 0px 0px 13px;
+ margin: 0px 0px 0px 0px;
+}
+.dop_blok_6 .anews .plus {
+ background: url(../dd/img/head/cot-up.gif) no-repeat 0px 5px;
+ padding: 0px 0px 0px 13px;
+}
+.dop_blok_6 .anews .minus {
+ background: url(../dd/img/head/cot-dwn.gif) no-repeat 0px 5px;
+ padding: 0px 0px 0px 13px;
+}
+.dop_blok_6 .anews td.archive {
+ text-align: right;
+ padding: 0px 0px 0px 0px;
+}
+
+/* подписки и всё такое */
+.bulb-print {
+  height: 38px;
+  white-space: nowrap;
+  font-size: 12px;
+  text-align: right;
+  line-height: 26px;
+  padding: 0 10px 0px 0px;
+}
+.bulb-print a {
+  background: url(../ibank/img/but/bulb-print.gif) no-repeat 0px 0px;
+  padding: 8px 0px 12px 36px;
+}
+.bulb-subs {
+  height: 36px;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 36px;
+  padding: 0px 0px 0px 0px;
+}
+.bulb-subs a {
+  background: url(../ibank/img/but/bulb-subs.gif) no-repeat 0px 0px;
+  padding: 8px 0px 12px 36px;
+  font-size: 12px;
+}
+.bulb-rss {
+  height: 36px;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 36px;
+  padding: 0px 0px 0px 0px;
+}
+.bulb-rss a {
+  background: url(../ibank/img/but/bulb-rss.gif) no-repeat 0px 0px;
+  padding: 8px 0px 12px 36px;
+  font-size: 12px;
+}
+/* ================= */
+
+/*заголовки*/
+.content h2 {
+  font-size: 24px;
+  font-weight: normal;
+  color: #333333;
+  padding: 0px 0px 0px 0px;
+  margin: 39px 0px 24px 0px;
+}
+.contright2 h3 {
+  font-size: 12px;
+  font-weight: normal;
+  color: #97c834;
+  border-top: 1px solid #e4e6e1;
+  border-bottom: 0px;
+  padding: 8px 0px 5px 25px;
+  margin: 0px 0px 0px 0px;
+}
+.right_div4 h3, pad-faq h3 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #97c834;
+  border-top: 0px;
+  border-bottom: 0px;
+  padding: 0px 0px 15px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.content .right2 h4 {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.contright2 .noprint h2 {padding: 0px 0px 20px 0px; font-size: 24px; color: #666666;}
+.noprint h2 {padding: 20px 0px 0px 0px; font-size: 24px; color: #666666;}
+
+/* блоки для колонок */
+#dop_blok {background: url(../img/table/left_col/dop_blok_1.gif) right top repeat-y; background-color: #fff;}
+.dop_blok_1 {background: url(../img/table/left_col/dop_blok.gif) left top repeat-y;}
+.dop_blok_2 {background: url(../img/table/left_col/dop_blok_2.gif) left top repeat-x;}
+.dop_blok_3 {background: url(../img/table/left_col/dop_blok_2.jpg) left top no-repeat;}
+.dop_blok_4 {background: url(../img/table/left_col/dop_blok_head.jpg) right top no-repeat;}
+.dop_blok_5 {padding: 30px 0 0 25px;  background: url(../img/table/left_col/dop_blok_5.jpg) left bottom no-repeat;}
+.dop_blok_6 {background: url(../img/table/left_col/dop_blok_6.jpg) right bottom no-repeat; padding-right: 15px;}
+.dop_blok_6 h1, .dop_blok_6 h3 {color: #006699; font-size: 20px; font-weight: normal; margin-top: 5px;}
+.dop_blok_6 h2 {color: #006633; font-size: 15px; font-weight: normal; padding-bottom: 0px;}
+.dop_blok_6 h2 a {color: #006633; font-size: 15px; font-weight: normal;}
+.dop_blok_6 p {padding-bottom: 1px;}
+.dop_blok_6 {padding-right: 20px;  font-size: 1em;  color: #666666;  font-family: Arial;}
+.dop_blok_6 ul li {list-style: none;}
+.dop_blok_6 a {color:#006699;}
+
+/*зеленый*/
+.r_col1 {background: url(../img/r_col/r_col1_left.gif) left top repeat-y;}
+.r_col2 {background: url(../img/r_col/r_col2_right.gif) right top repeat-y;}
+.r_col3 {background: url(../img/r_col/r_col_lv.jpg) right top no-repeat;}
+.r_col4 {background: url(../img/r_col/r_col_rv.jpg) left top no-repeat;}
+.r_col4_ {background: url(../img/r_col/r_col_rv.jpg) left top no-repeat;}
+.r_col5 {padding: 30px 20px 0px 25px; background: url(../img/r_col/r_col_rn.jpg) right bottom no-repeat; color: #fff;}
+.r_col6 {background: url(../img/r_col/r_col_ln.jpg) left bottom no-repeat;}
+.r_col6 h2 {color: #ffffff; font-size: 20px; font-weight: normal; padding-bottom: 8px;}
+.r_col6 h2 a {color: #ffffff; font-size: 20px; font-weight: normal;}
+.r_col4, .r_col5 {padding: 20px 7px 15px 25px;}
+.r_col4 ul, .r_col5 ul, .r_g_col5 ul {margin: 0 7px 5px 0;}
+.r_col4 ul li, .r_col5 ul li, .r_g_col5 ul li {list-style: none;   padding-bottom: 2px;}
+.r_col4 ul li a {color: #fff; font-size: 12px;}
+.r_col5 ul li a {color: #fff; font-size: 12px;}
+
+/*серый */
+.r_g_col1 {background: url(../img/r_col/r_g_col1_left.gif) left top repeat-y;}
+.r_g_col2 {background: url(../img/r_col/r_g_col2_right.gif) right top repeat-y;}
+.r_g_col3 {background: url(../img/r_col/r_g_col_rv.jpg) right top no-repeat;}
+.r_g_col4 {background: url(../img/r_col/r_g_col_lv.jpg) left top no-repeat;}
+.r_g_col3_ {background: url(../img/r_col/r_g_col_lv.jpg) left top no-repeat;}
+.r_g_col4_ {background: url(../img/r_col/r_g_col_rv.jpg) right top no-repeat;}
+.r_g_col5 { background: url(../img/r_col/r_g_col_ln.jpg) left bottom no-repeat; padding: 20px 20px 15px 25px; display: block;}
+.r_g_col6 {background: url(../img/r_col/r_g_col_rn.jpg) right bottom no-repeat;}
+.r_g_col6 h2 {color: #6a6869; font-size: 20px; font-weight: normal;  padding-bottom: 5px;}
+.r_g_col6 h2 a {color: #6a6869; font-size: 20px; font-weight: normal;}
+.r_g_col5 {color: #666666;}
+.r_g_col5 ul li a {color: #006699; font-size: 12px;}
+
+/* ================= */
+
+/* 18122008 */
+.right_div4 h2, pad-faq h2 {
+border-bottom:0 none;
+border-top:0 none;
+color:#97C834;
+font-size:18px;
+font-weight:normal;
+margin:0;
+padding:0 0 15px;
+}

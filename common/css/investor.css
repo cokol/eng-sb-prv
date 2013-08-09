@@ -1,0 +1,80 @@
+.body_invest {
+   width: 438px;
+}
+
+.invest_right {
+    width: 187px; padding-left: 25px;
+}
+.invest_right div {
+    background: url(../img/uploaded/en/img/bg_invest.gif) repeat-x bottom; margin-bottom: 15px;
+}
+
+.invest_kont {
+  margin-bottom: 0px; background: url(../img/uploaded/en/img/bg_invest.gif) repeat-x bottom;
+}
+
+
+.body_dop_left {
+    width: 209px; float: left; border-bottom: 1px solid #dedcd7; background: url(../img/uploaded/en/img/bg_body_dop.gif) repeat-x bottom; margin: 15px 20px 15px 0px;
+}
+
+.body_dop_right {
+    width: 209px; float: left; border-bottom: 1px solid #dedcd7; background: url(../img/uploaded/en/img/bg_body_dop.gif) repeat-x bottom;  margin: 15px 0px;
+}
+
+.body_dop_right p , .body_dop_left p {
+  padding: 10px 14px 11px 7px; display: block; margin: 0px;
+}
+.body_dop_right p a, .body_dop_left p a {
+    font-family: Tahoma; font-size: 11px; color: #888888; text-decoration: none;
+}
+
+.contright2 h2 {
+  padding: 0px;
+}
+
+.contright2 h3 {
+  border-bottom: 0px; margin: 0px 0px 9px 0px; padding: 0px; font-family: Tahoma; font-size: 16px; color: #97C834; font-weight: bold;
+}
+
+.img_invest {
+  border-top: 1px solid #cac9c5; background: url(../img/uploaded/en/img/img_invest.gif) repeat-x left bottom; padding-bottom: 8px;
+}
+
+.invest_right_text {
+
+}
+
+.body_invest .list .data  {
+  color: #0a4b2e; font-size: 11px; font-weight: bold; padding-left: 12px; border-top: 1px solid #E3E3E0; border-bottom: 0px; padding-bottom: 0px;
+}
+.body_invest .list h3 {
+  margin-left: 0px; padding-bottom: 9px;
+}
+.body_invest .list h3 a {
+  text-decoration: none; color: #888888; font-size: 11px; padding-left: 12px; display: block;
+}
+.newslist {
+  border-bottom: 1px solid #E3E3E0;
+}
+
+
+.invest_right_text div {
+}
+.link_img {
+   margin: 55px 13px 19px 139px; display: block;
+}
+
+.tab2 p {
+    font-family: Arial; font-size: 11px; color: #0A4B2E; font-weight: bold; padding: 0px 0px 0px 0px; margin: 0px;
+}
+.contright2 .tab2 tr td {
+  border-top: 0px; border-bottom: 1px solid #E3E3E0; padding: 6px 11px 0px 9px; margin: 0px;
+   font-family: Arial; font-size: 11px; color: #888888; font-weight: normal;
+}
+.contright2 .tab2 tr td {
+  border-top: 1px solid #CAC9C5;  margin: 0px;
+}
+.contright2 .tab2 {
+  margin-top: 0px;
+}

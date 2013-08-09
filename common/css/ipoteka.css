@@ -1,0 +1,309 @@
+.bulb-back a {
+    background: url(../ibank/img/but/bulb-back.gif) no-repeat 0px 0px;
+    padding: 8px 0px 12px 36px;
+    position: relative;
+}
+
+.fleft {
+    float: left;
+}
+.fright {
+    float: right;
+}
+
+.ipotekasearch .left {
+    float: left;
+}
+.hrline {
+    height: 10px;
+    border-bottom: 1px solid #eae7e1;
+    border-bottom: 1px solid #eae7e1;
+    background-color: #f2efe8;
+    margin: 14px 0;
+}
+
+.ipotekasearch h1, .ipotekaobject h1 {
+    font-family: Tahoma;
+    font-weight: bold;
+    color: #666666;
+    font-size: 25px;
+}
+
+.ipotekasearch .dropdown {
+    border: 0;
+}
+
+.ipotekasearch .newform {
+    border: 1px solid #dddddd;
+    border-top: 1px solid #7c7c7c;
+    background-image: url('../img/formshadow.gif');
+    background-position: top left;
+    background-repeat: repeat-x;
+    padding: 3px 5px;
+    color: #595959;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.ipotekasearch .newformlabel {
+    color: #666666;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding-bottom: 4px;
+}
+
+.ipotekasearch .fieldsize1 {
+    width: 260px !important; /* 388 */
+}
+
+.ipotekasearch .fieldsize2 {
+    width: 184px !important;
+}
+
+.ipotekasearch .dataselect {
+    background-image: url('../img/dataselect.gif');
+    background-position: top left;
+    background-repeat: no-repeat;
+    display: block;
+    width: 20px;
+    height: 17px;
+    margin-left: 7px;
+    margin-top: 3px;
+}
+
+.ipotekasearch .searchnow  {
+    background-image: url('../img/searchnowbut.gif');
+    background-position: top left;
+    background-repeat: no-repeat;
+    display: block;
+    width: 213px;
+    height: 43px;
+    cursor: pointer;
+    border: 0;
+}
+
+.tablespacer {
+    height: 19px;
+}
+
+.tablelist {
+    margin-top: 25px;
+}
+/* table */
+table.tabnew1n {
+    background: url(../img/tabclass/th-bg.gif) repeat-x 0px 0px;
+    font-size: 14px;
+    font-family: Arial;
+    border-bottom: 10px solid #e3e3e3;
+    width: 100%;
+}
+table.tabnew1n th {
+    text-align: left;
+    vertical-align: middle;
+    font-weight: normal;
+    color: #FFF;
+    height: 38px;
+    padding: 0px 15px 0px 17px;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+}
+table.tabnew1n th.f {
+    background: transparent url(../img/tabclass/th-l.gif) no-repeat 0px 0px;
+}
+table.tabnew1n th.l {
+    background: transparent url(../img/tabclass/th-r.gif) no-repeat 100% 0px;
+}
+table.tabnew1n td {
+    background: #f5f5f5 url(../img/tabclass/td-bg.gif) repeat-x 0px 0px;
+    border-bottom: 1px solid #d9d8d5;
+    padding: 18px 15px 12px 17px;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #323232;
+    text-align: left;
+}
+table.tabnew1n td span {
+    font-size: 14px;
+}
+table.tabnew1n td.grey {
+    color: #666666;
+    font-size: 14px;
+}
+table.tabnew1n div.objcount {
+    font-size: 20px;
+    color:#323232;
+    text-align: right;
+    padding-right: 80px;
+}
+table.tabnew1n div.akcia {
+    background-image: url('../img/akcia.gif');
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+
+table.tabnew1n td a {
+    color: #005826;
+    font-size: 14px;
+}
+
+.ipotekaobject {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.objadres {
+    background-image: url('../img/mappoint.gif');
+    background-position: left 5px;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    margin-top: 12px;
+}
+.objlongadres {
+    font-size: 19px;
+    color: #006c31;
+}
+.objshortadres {
+    font-size:  14px;
+    color: #666666;
+    font-weight: bold;
+}
+
+.objakciawrap {
+    margin: 0 0 20px 0;
+    height: 19px;
+}
+
+.objakcia {
+    color: #ee541c;
+    font-size: 13px;
+    font-weight: bold;
+    background-image: url('../img/akcia.gif');
+    background-position: center left;
+    background-repeat: no-repeat;
+    padding-left: 54px;
+}
+
+
+.objlistparams {
+    background-image: url('../img/objlistfon.gif');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    padding-bottom: 1px;
+    margin-bottom: 12px;
+}
+.objlistparams span {
+    background-color: #ffffff;
+}
+.objlistparams .paramleft {
+    float: left;
+    width: 60%;
+    text-align: left;
+    color: #303030;
+    font-size: 14px;
+    font-weight: bold;
+}
+.objlistparams .paramright {
+    float: left;
+    clear: right;
+    width: 40%;
+    text-align: right;
+    color: #303030;
+    font-size: 14px;
+}
+.objlistparams .paramleft span {
+    padding-right: 2px;
+}
+.objlistparams .paramright span {
+    padding-left: 2px;
+}
+
+
+.objlistparams .paramcls {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.objsubtitle {
+    font-size: 16px;
+    color: #666666;
+    font-weight: bold;
+}
+.objsubtitle span {
+    font-size: 16px;
+    color: #303030;
+    font-weight: normal;
+}
+.ipotekaobject .marg {
+    margin: 20px 0 14px 0;
+}
+
+.ipotekaobject .marg2 {
+    margin-bottom: 18px;
+}
+
+.ipotekaobject .greentext{
+    color: #00683d;
+}
+
+
+.objurl a {
+    color: #006c31;
+    font-size: 16px;
+}
+.objurl span {
+    background-image: url('../img/objurl.gif');
+    background-position: top right;
+    background-repeat: no-repeat		;
+    padding-top: 5px;
+    padding-right: 7px;
+}
+
+.ipotekaobject .preview {
+    background-image: url('../img/objfotofon.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding: 13px 12px 12px 12px;
+    position: relative;
+}
+
+.ipotekaobject .gallerythumbs div {
+    float: left;
+    margin-right: 7px;
+    margin-bottom: 7px;
+}
+
+.ipotekaobject a.prev {
+    background: url(../img/fotonavleft.png) no-repeat transparent;
+    width: 45px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    top: 140px;
+    border: 0px;
+    left: -11px;
+    z-index: 2;
+}
+.ipotekaobject a.next {
+    background: url(../img/fotonavright.png) no-repeat transparent;
+    width: 45px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    top: 140px;
+    border: 0px;
+    right: 12px;
+    z-index: 2;
+}
+.ipotekaobject .gallerythumbs {
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.ipotekaobject .expand {
+    margin-left: -6px;
+}

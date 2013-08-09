@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*
+	styles for select
+*/
+.cusel,
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown {
+	background: url(../img/selects-2.png) no-repeat;
+}
+.cusel { 
+	height: 18px;
+	background-position: left top;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+   z-index: 1;
+}
+.cuselFrameRight { 
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 22px;
+	width: 42px;
+	background-position: right top;
+}
+
+
+.cusel span { 
+	display: block;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 2px 15px 2px 5px; 
+	zoom: 1;
+}
+.cusel span:hover,
+.cusel .cuselOptHover { 
+	background: #94C530;
+	color: #fff;
+}
+
+
+/*
+	styles for focus and hover
+
+.cusel:hover,
+.cusel:hover .cuselFrameRight,
+.cusel:focus,
+.cusel:focus .cuselFrameRight,
+.cuselFocus,
+.cuselFocus .cuselFrameRight {
+	background-image: url(../img/selects-focus.png);
+}
+*/
+.cuselOpen {
+	z-index: 999;
+}
+
+/*
+	styles for disabled select
+*/
+.classDisCusel,
+.classDisCusel .cuselFrameRight {
+	background-image: url(../img/selects-2-dis.png) !important;
+	cursor: default;
+	color: #ccc;
+}
+.classDisCusel .cuselText {
+	cursor: default;
+}
+
+
+/*
+	styles for scrollbar
+*/
+.cusel .cusel-scroll-wrap {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #fff; 
+	min-width: 100%;
+	width: auto;
+	z-index: 9999;
+}
+.cusel .jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 555;
+	border: 1px solid #999; 
+}
+
+.cusel .jScrollPaneTrack { 
+	height: 100%;
+	width: 13px !important;
+	position: absolute;
+	top: 0;
+	right: 2px;
+	background-image: url('../img/selects-2-panetrack.png');
+	background-position: top left;
+	background-repeat: repeat-y;	
+}
+
+/*
+.cusel .jScrollPaneDrag { 
+	position: absolute;
+	background-position: -42px -29px;
+	cursor: pointer;
+	width: 15px !important;
+	height: 20px !important;
+	right: -1px;
+	
+}
+*/
+.cusel .jScrollPaneDrag {
+	position: absolute;
+	/*background: #666;*/
+	background:url(ui-lightness/images/scrl_but.jpg) no-repeat left top;  
+	cursor: pointer;
+	overflow: hidden;
+	width:15px !important;
+}
+
+.cusel .jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollArrowUp { 
+	position: absolute;
+	top: 0;
+	right: 2px;
+	width: 201px;
+	height: 15px;
+	cursor: pointer;
+	background-position: -2px -29px;
+	overflow: hidden;
+}
+.cusel .jScrollArrowDown {
+	width: 20px;
+	height: 15px;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: 2px;
+	cursor: pointer;
+	background-position: -19px -29px;
+	overflow: hidden;
+}

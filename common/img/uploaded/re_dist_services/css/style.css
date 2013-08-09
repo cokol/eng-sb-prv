@@ -1,0 +1,372 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+
+HTML, BODY { height:100%;}
+BODY {
+ padding:0;
+ margin:0;
+ color:#000000 !important;
+ font-size:11px;
+ font-family:Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; 
+ background-color:#f3f0e9; 
+}
+
+H1, H2, H3 {
+ margin:0px;
+ line-height:normal;
+}
+H2 {font-size:14px;}
+H3 {font-size:12px;}
+
+img{
+ border:0;
+}
+
+A {text-decoration:underline; color:#0069bf;}
+
+UL LI {line-height:17px;}
+
+OL {margin-left:33px;}
+OL LI {padding:1px 0 1px 0px;}
+
+table{
+ border-collapse:collapse;
+ empty-cells:show;
+}
+
+.clear:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.clear {display:inline-block;}
+.clear {display:block;}
+.clearboth {clear:both}
+
+div.page { width:960px;margin:0 auto }
+
+.header {margin-bottom: 36px;}
+/*//////////------//////////*/
+/*  СБЕРБАНК ОНЛАЙН  */
+/*//////////------//////////*/
+a {outline:none;}
+
+div#sbol_page { font-family:Arial, Helvetica, sans-serif; margin-top: -36px;}
+
+div.sbol_topmenu {height:51px; padding-top:5px; background:url(../sbol/sbol_topmenu.png) 0 100% no-repeat; position:relative; top:-5px; left:0; width:100%; font:normal 14px/43px Arial, Helvetica, sans-serif;  margin-bottom:30px;}
+
+div.sbol_topmenu a {color:#393939; display:inline-block; padding-left:10px; line-height:23px; font-size:14px; text-decoration:none }
+div.sbol_topmenu span {text-decoration:none;border-bottom:none !important; background:url(../sbol/sbol_floatmenu_arr.png) 100% 2px no-repeat; padding-right:20px; margin-left:18px; margin-right:5px;}
+div.sbol_topmenu a.reg {text-decoration:none; background:url(../sbol/sbol_floatmenu_arr.png) 100% 5px no-repeat; padding:0 11px 0 0; margin-left:18px; margin-right:5px}
+div.sbol_topmenu a:hover u, div#floatmenu a:hover u {border-bottom-color:#e99900; color:#e99900}
+
+div.sbol_topmenu a i {padding:0 9px 0 0; font-style:normal;}
+div.sbol_topmenu a i u {border-bottom:1px solid #b2b2b2; text-decoration:none;}
+
+div.sbol_topmenu a.active {background:url(../sbol/sbol_topmenu_a.png) 0 0 no-repeat;}
+div.sbol_topmenu a.active i {display:block; background:url(../sbol/sbol_topmenu_a.png) 100% 100% no-repeat;}
+div.sbol_topmenu a.active i u {border:0}
+div.sbol_topmenu a.active:hover u, div#floatmenu a.active:hover u { color:#393939; cursor:default}
+
+
+
+div#sbol_page div#floatmenu {height:69px; background:url(../sbol/sbol_floatmenu.png) 0 0 repeat-x; position:fixed; top:-10px; left:0; width:100%; font:normal 14px Arial, Helvetica, sans-serif; z-index:800;display:none;}
+
+div#floatmenu p.links {float:left; margin:0; padding-top:2px; position: relative; top:21px }
+div#floatmenu div.floatmenuIn {width:960px; margin:0 auto;  font-size:0;}
+div#floatmenu p.links a {color:#393939; font-size:14px; display:inline-block; line-height:23px; padding-left:10px; text-decoration:none; vertical-align:middle; }
+div#floatmenu p.links span {text-decoration:none;border-bottom:none !important; background: url(../sbol/sbol_floatmenu_arr.png) 100% 6px no-repeat; padding-right:20px; margin-left:18px; margin-right:5px;display:inline-block; line-height:23px; font-size: 14px; vertical-align: middle; }
+div#floatmenu p.links a.gotop {text-decoration:none; background:url(../sbol/sbol_floatmenu_arr.png) 100% 5px no-repeat; padding-right:20px; margin-left:0;}
+div#floatmenu p.links a.gotop u {border-bottom:1px dotted #b2b2b2; text-decoration:none;}
+div#floatmenu p.links a:hover, div#floatmenu p.links a:hover u {border-bottom-color:#e99900; color:#e99900}
+div#floatmenu p.links a.gotop.reg {margin-right:10px;}
+div#floatmenu p.links a.gotop.reg u {border-bottom-style:solid}
+
+div#floatmenu p.links a i {padding:0 9px 0 0; display:block;font-style:normal;}
+div#floatmenu p.links a i u {border-bottom:1px solid #b2b2b2; text-decoration:none;}
+div#floatmenu p.links a.active {background:url(../sbol/sbol_topmenu_a.png) 0 0 no-repeat;}
+div#floatmenu p.links a.active i { background:url(../sbol/sbol_topmenu_a.png) 100% 100% no-repeat;}
+div#floatmenu p.links a.active i u {border:0;}
+div#floatmenu p.links a.active:hover, div#floatmenu p.links a.active:hover u {color:#393939; cursor:default}
+
+
+div#floatmenu p.sbol_login {float:right; margin:0;font-size:14px; width:200px; text-align:right; color:#717171}
+div#floatmenu p.sbol_login a.abol_but_login {display:inline-block; width:195px; height:28px;background:url(../sbol/sbol_but_login.png) 0 0 no-repeat; border:0; line-height:25px; color:#fff; text-decoration:none; text-align:center; font-size:14px; margin:0; position:relative; top:1px;}
+div#floatmenu p.sbol_login a.abol_but_login:hover {background-position:0 100% !important}
+
+div#floatmenu p.gotop {float: right;margin: 0;  }
+div#floatmenu p.gotop a {display: inline-block; vertical-align: middle !important; width: 22px; height: 22px; background: url(../sbol/sbol_gotop.png) 0 0 no-repeat; cursor: pointer; position: relative; top:22px;}
+div#floatmenu p.gotop a:hover {background-position: 0 100%}
+
+div#sbol_page h1 {font:normal 37px/47px Arial, Helvetica, sans-serif; text-align:center; margin-bottom:18px;}
+p.sbol_slogan {color:#3e3934; font-size:16px; text-align:center; margin-bottom:36px;}
+
+
+div.sbol_iconmenu {padding-bottom:66px; background:url(../sbol/sbol_iconmenu_sh.jpg) 50% 100% no-repeat;}
+div.sbol_iconmenu p.col {float:left; width:200px; padding:0 20px; font-weight:500; margin:0; text-align:center; font-size:13px; line-height:17px }
+
+div.sbol_iconmenu a {display:block; text-decoration:none; color:#25221f}
+div.sbol_iconmenu a span.pic {display:block !important; height:90px !important; line-height:90px !important; margin-bottom:11px; }
+div.sbol_iconmenu a span.pic img {vertical-align:middle !important; }
+div.sbol_iconmenu a span.title {color:#449d2f; font-size:20px; display:block; margin-bottom:8px; line-height:22px !important }
+div.sbol_iconmenu a span.title u {border-bottom:1px dotted #2c840e; text-decoration:none;}
+div.sbol_iconmenu a:hover span.title {color:#e99900}
+div.sbol_iconmenu a:hover span.title u {border-bottom-color:#e99900}
+
+
+div.sbol_section {width:940px; margin:0 auto; padding-bottom:25px; padding-top:50px; border-top:1px solid #d9d9d9;}
+div.sbol_section#sectionSbol {border:0;}
+div.sbol_section div.pic {float:left; width:435px; padding-top:5px; height:415px; text-align:center; position:relative;}
+div.sbol_section#sectionSbol div.pic, div.sbol_section#sectionTerminals div.pic {background:url(../sbol/sbol_picbg.png) 0 0 no-repeat;}
+div.sbol_section div.text {float:right; width:420px; padding-right:40px;}
+div.sbol_section h2 {color:#25221f; font-size:30px; margin-bottom:20px; font-weight:500}
+
+div.sbol_section div.pic img {display:none; position:absolute; left:5px; top:5px; z-index:100;}
+div.sbol_section div.pic img:first-child {display:inline-block; z-index:50}
+div.sbol_section.textAtLeft div.pic {float:right; position:relative; left:-30px;}
+
+div.sbol_section div.text div.item {cursor:default; padding-left:30px; position:relative; font-size:13px; line-height:19px; padding-bottom:20px;}
+div.sbol_section div.text div.item span.num {display:inline-block; background:url(../sbol/sbol_li.png) 0 0 no-repeat; padding-left:1px; width:20px; height:21px; text-align:center; color:#fff; font-size:16px; font-weight:700; line-height:21px; position:absolute; left:0px; top:-1px;}
+div.sbol_section div.text div.item a.title {font-size:16px; font-weight:700; color:#25221f; text-decoration:none; border-bottom:1px dotted #25221f}
+div.sbol_section div.text div.item:hover a.title {border-bottom-color:#e99900; color:#e99900}
+
+div.sbol_section a.readmore {display:inline-block; width:152px; height:33px; background:url(../sbol/sbol_but_readmore.png) 0 0 no-repeat; color:#fff; text-align:center; text-decoration:none; font-size:15px; font-weight:700; text-shadow:0 -1px 1px #3a8a1b; line-height:30px;margin-right:25px; margin-top:10px;}
+div.sbol_section a.readmore:hover {background-position:0 100%;}
+
+div.sbol_section a.showinstruction {display:inline-block; cursor:pointer; color:#449d2f; font-weight:700; font-size:15px; text-decoration:none; background:url(../sbol/sbol_arr_down.png) 100% 0 no-repeat; height:21px; line-height:21px; padding-right:28px;}
+div.sbol_section a.showinstruction u {text-decoration:none; border-bottom:1px dotted #449d2f;}
+div.sbol_section a.showinstruction:hover {color:#e99900; background-position:100% 100%}
+div.sbol_section a.showinstruction:hover u {border-bottom-color:#e99900;}
+div.sbol_section a.showinstruction.active {background-image:url(../sbol/sbol_arr_up.png) !important;}
+
+
+
+div.sbol_section div.instruction {clear:both; background:#fff; -moz-box-shadow:3px 0 5px #949ba2; -webkit-box-shadow:3px 0 5px #949ba2; box-shadow:0 0 20px #e4e1db; font-size:13px; position:relative; display:none;}
+div.sbol_section div.instruction a.instrClose {display:block; width:21px; height:21px; cursor:pointer; position:absolute; right:9px; top:9px; background:url(../sbol/sbol_close.png) 0 0 no-repeat;}
+div.sbol_section div.instruction a.instrClose:hover {background-position:0 100%}
+div.sbol_section div.instruction div.step {float:left; width:260px;padding:22px 50px 28px 0;}
+div.sbol_section div.instruction div.step p.num {float:left; width:72px; padding-top:2px; text-align:center; margin:0; font-size:12px; color:#ed9c00}
+div.sbol_section div.instruction div.step p.text {float:left; width:188px; margin:0; line-height:19px !important;}
+
+div.sbol_section#sectionBank div.instruction div.step {width:420px !important}
+div.sbol_section#sectionBank div.instruction div.step p.text {width:340px !important}
+
+div.sbol_section.textAtLeft div.text {float:left; padding-right:0;}
+div.sbol_section div.sbol_mobileSelect {float:right; width:500px;}
+div.sbol_section div.sbol_mobileSelect div.pic {background:none; float:right;}
+
+
+div.sbol_section div.sbol_mobileSelect div.dl p.bubble {width:130px; height: 67px; background: url(../sbol/sbol_iphone_dl_bubble.png) 0 0 no-repeat; position: absolute; left: 0; top:-100px; padding: 10px 10px 10px 12px;}
+
+div#sectionMobile {padding-bottom:45px}
+div.sbol_mobileSelectItems {width: 490px; height: 334px; margin-bottom:33px;}
+div#sectionMobile div.sbol_mobile_item {display:none;  width: 490px; height: 334px; position: absolute; left: 0; top:0;}
+div#sectionMobile div.sbol_mobile_item:first-child {display:block;}
+div.sbol_mobileSelect {float:right;width:490px; position:relative; top:-10px; }
+div#sectionMobile div.sbol_mobile_item div.pic { left:0 !important; float:left; width:395px; text-align:left; padding:0;height:334px;}
+div#sectionMobile div.sbol_mobile_item div.dl {position:absolute; right:10px; top:98px; font-size:13px; line-height:17px; width:140px; border-top:1px dotted #929292; border-bottom:1px dotted #929292; padding:13px 0 17px 0; z-index:600;}
+div#sectionMobile div.sbol_mobile_item div.dl img {margin-top:13px;}
+div#sectionMobile div.sbol_mobile_item div.dl a {color:#000; display:block; text-decoration:none;}
+div#sectionMobile div.sbol_mobile_item div.dl a:hover {color:#e99900}
+div#sectionMobile div.sbol_mobile_item#sbol_ipad div.dl {right:-32px !important;}
+
+div.sbol_chooser {clear:both;height:34px;}
+div.sbol_chooser a {display:block; float:left; height:34px; padding:0 22px; font-size:15px; line-height:34px !important; color:#25221f; text-decoration:none; background:url(../sbol/sbol_mobileselect.png) 50% 0 no-repeat; cursor:pointer; border-left:1px solid #bbbbbb; outline:none }
+div.sbol_chooser a:first-child {background-position:0 0; border:0;}
+div.sbol_chooser a.last {background-position:100% 0;}
+
+div.sbol_chooser a:hover {background-position:50% -34px;}
+div.sbol_chooser a:first-child:hover {background-position:0 -34px;}
+div.sbol_chooser a.last:hover {background-position:100% -34px;}
+div.sbol_chooser a.active {background-position:50% -68px; color:#fff}
+div.sbol_chooser a:first-child.active {background-position:0 -68px;}
+div.sbol_chooser a.last.active {background-position:100% -68px;}
+
+
+
+
+
+
+div#sbol_page div.sbol_inner {padding-right:220px; width: 740px; font-size:13px; line-height:19px; position:relative; }
+div#sbol_page div.sbol_inner h1 {text-align:left;font:normal 32px/44px Arial, Helvetica, sans-serif; margin-top: -15px; margin-bottom:8px; color:#2f2b27; position:relative;}
+div#sbol_page div.sbol_inner p {margin-bottom:15px;}
+div#sbol_page div.sbol_inner h2 {text-align:left;font:normal 25px/30px Arial, Helvetica, sans-serif; margin-bottom:12px; color:#2f2b27;}
+
+div.sbol_apps_platforms_content div.sbol_apps_platrom {position: absolute; left: -9999px; top:0; }
+div.sbol_apps_platforms_content div#sbol_apps_iphone {left: 0;}
+
+div.sbol_apps_platforms_wrapper {position: relative;}
+div.sbol_apps_platforms_content {height: 850px; }
+
+div.sbol_apps_platrom {}
+div.sbol_inner div.sideBlock {width:190px; height:50px; position:absolute; right:0; top:0;}
+	div.sbol_apps_platforms_wrapper div.sideBlock { top:-166px;}
+div.sbol_inner div.sideBlockIn {position:absolute;line-height:17px; top:0; width:160px; background:#fff; padding:20px 15px 10px 15px;}
+div.sbol_inner div.sbol_apps_platforms_content div.sideBlockIn {display: none }
+div.sbol_inner div.sbol_apps_platforms_content #sbol_apps_iphone div.sideBlockIn  {display: block}
+div.sbol_inner div.sideBlockIn.sticky {position:fixed; top:91px;}
+div.sbol_inner div.sideBlockIn.sidebottom {position: relative !important; left: 0 !important; }
+div.sbol_inner div.sideBlock p {padding:1px 0; margin:0;}
+div.sbol_inner div.sideBlock hr {margin: 5px 0 10px 0}
+div.sbol_inner div.sideBlock a {color:#3b9327; display:block;}
+div.sbol_inner div.sideBlock a:hover {text-decoration:none; color:#e99900 !important}
+div.sbol_inner div.sideBlock div.dl {text-align:center; padding:0 10px; padding-bottom:11px;}
+div.sbol_inner div.sideBlock div.dl a {display:block; color:#737373; text-decoration:none;}
+div.sbol_inner div.sideBlock div.qr {text-align:center;}
+div.sbol_inner a.pdf {background:url(../sbol/ico_pdf.png) 0 0 no-repeat; padding:1px 0 3px 27px;}
+div.sbol_inner a.aero {background:url(../sbol/ico_aero.png) 0 0 no-repeat; padding:1px 0 3px 27px;}
+
+div.sbol_inner div.sideBlock p.bubble {width:130px; height: 67px; background: url(../sbol/sbol_iphone_dl_bubble.png) 0 0 no-repeat;  padding: 10px 10px 10px 12px; margin: 0 auto;}
+
+div.sbol_inner hr {color:#ccc; border:0;height:1px; background:#ccc; margin:10px 0 15px 0}
+
+div.sbol_apps_sliders_container { width:700px; padding-right: 260px; margin-top: 30px; background:url(../sbol/sbol_apps_sep.gif) 0 100% no-repeat;  margin-bottom:26px;position:relative; }
+div.sbol_apps_slider_wrapper {padding-bottom:85px; display:none;  }
+div.sbol_apps_slider_wrapper:first-child {display:block;}
+div.sbol_apps_slider_wrapper div.cycle-slideshow-my {overflow: hidden}
+	#sbol_apps_iphone div.sbol_apps_slider_wrapper {margin:0 auto; background:url(../sbol/sbol_apps_iphone.jpg) 0 0 no-repeat; width:405px; height:664px; }
+	#sbol_apps_iphone div.cycle-slideshow-my {position:relative; left:75px; top:93px; width:260px; height:462px; overflow:hidden;}
+	
+	#sbol_apps_ipad div.sbol_apps_slider_wrapper {margin:0 auto; background:url(../sbol/sbol_apps_ipad.jpg) 0 0 no-repeat; width:689px; height:416px;}
+	#sbol_apps_ipad div.cycle-slideshow-my {position:relative; left:109px; top:19px; width:478px; height:359px; overflow:hidden;}
+	
+	#sbol_apps_android div.sbol_apps_slider_wrapper {margin:0 auto; background:url(../sbol/sbol_apps_android.jpg) 0 0 no-repeat; width:405px; height:608px;}
+	#sbol_apps_android div.cycle-slideshow-my {position:relative; left:67px; top:52px; width:275px; height:489px; overflow:hidden;}
+	
+	#sbol_apps_winphone div.sbol_apps_slider_wrapper {margin:0 auto; background:url(../sbol/sbol_apps_winphone.jpg) 0 0 no-repeat; width:405px; height:583px;}
+	#sbol_apps_winphone div.cycle-slideshow-my {position:relative; left:78px; top:57px; width:252px; height:420px; overflow:hidden;}
+
+
+div.sbol_apps_slider_wrapper div.alt-caption {width:550px; text-align:center; font-size:14px; font-style:italic; position:absolute; bottom:0; left:75px; height:55px; line-height:19px;} 
+div.sbol_apps_slider_wrapper div.cycle-pager {text-align:center; position:absolute; bottom:65px; left:75px; width:550px;  }
+div.cycle-pager {line-height: 10px !important;}
+
+div.cycle-pager span {list-style:none; display:inline-block; width:10px; height:10px; background:url(../sbol/sbol_slide_nav.png) 0 0 no-repeat; cursor:pointer; text-indent:-9999px; margin:5px 3px 4px 4px; }
+div.cycle-pager span.cycle-pager-active {background-position:0 100%;}
+
+
+.sliderPrev {display:block; width:43px; position:absolute; top:257px; left:120px; height:51px; background:url(../sbol/sbol_slide_nav_l.png) 0 0 no-repeat; cursor:pointer; z-index:500;}
+.sliderPrev:hover {background-position:0 -51px;}
+.sliderPrev.disabled {background-position:0 100%; cursor:default}
+.sliderNext {display:block; width:43px; position:absolute; top:257px; right:376px; height:51px; background:url(../sbol/sbol_slide_nav_r.png) 0 0 no-repeat; cursor:pointer; z-index:500;}
+.sliderNext:hover {background-position:0 -51px;}
+.sliderNext.disabled {background-position:0 100%;cursor:default}
+
+#sbol_apps_iphone div.reflex {width:257px; height:618px; background:url(../sbol/sbol_apps_iphone_reflex.png) 0 0 no-repeat; position:absolute; left:236px; top:13px; z-index:2; display: none !important}
+#sbol_apps_ipad div.reflex {width:364px; height:390px; background:url(../sbol/sbol_apps_ipad_reflex.png) 0 0 no-repeat; position:absolute; left:282px; top:5px; z-index:2; display: none !important}
+#sbol_apps_android div.reflex {width:248px; height:567px; background:url(../sbol/sbol_apps_android_reflex.png) 0 0 no-repeat; position:absolute; left:252px; top:10px; z-index:2; display: none !important}
+#sbol_apps_winphone div.reflex {width:233px; height:535px; background:url(../sbol/sbol_apps_winphone_reflex.png) 0 0 no-repeat; position:absolute; left:261px; top:13px; z-index:2; display: none !important}
+
+#sbol_apps_ipad .sliderPrev {left:-10px; top:172px;}
+#sbol_apps_ipad .sliderNext {right:242px; top:172px;}
+#sbol_apps_android .sliderPrev { top:250px;}
+#sbol_apps_android .sliderNext { top:250px;}
+#sbol_apps_winphone .sliderPrev { top:230px;left:120px; }
+#sbol_apps_winphone .sliderNext { top:230px; right:373px;}
+
+div.sbol_inner div.platform_chooser {margin:0 0 55px 155px; display: none;}
+
+div.sbol_apps_else {width:700px; padding-bottom:50px;}
+
+div.sbol_inner div.sbol_apps_else h2 {font-size:25px !important; margin-bottom:30px !important;}
+div.sbol_inner div.sbol_apps_else div.features h3 {font-size:16px; margin-bottom:15px; font-weight:700; border-bottom:1px dotted #929292; padding-bottom:4px} 
+
+div.sbol_apps_else div.features {width:740px;margin-bottom: 15px;}
+div.sbol_apps_else div.features div.col {float:left; width:340px; margin:0 25px 15px 0;}
+div.sbol_apps_else div.features li {list-style:none; padding-left:40px; margin-bottom:20px !important; position:relative;}
+div.sbol_apps_else div.features li i.pic {display:block; width:35px; height:35px; line-height:30px; position:absolute; left:0; top:50%; margin-top:-18px;}
+div.sbol_apps_else div.features li i.pic img {vertical-align:middle !important}
+
+div.sbol_apps_else div.sbol_openening h4 {color:#449d2f; font-size:25px; font-weight:500; margin-bottom:30px !important}
+div.sbol_apps_else div.sbol_openening h4 u {text-decoration:none; background:url(../sbol/sbol_dashed_green.gif) 0 100% repeat-x; padding-bottom:8px; position:relative; display:inline-block; cursor:pointer;}
+div.sbol_apps_else div.sbol_openening h4 span { background:url(../sbol/sbol_arr_down.png) 0 0 no-repeat; display:inline-block; height:21px; position:absolute; right:-31px; top:1px; width:21px;}
+div.sbol_apps_else div.sbol_openening h4 u.active span { background:url(../sbol/sbol_arr_up.png) 0 0 no-repeat;}
+
+div.sbol_apps_else div.sbol_openening h4 u:hover {color:#e99900; background-image:url(../sbol/sbol_dashed_orange.gif);}
+div.sbol_apps_else div.sbol_openening h4 u:hover span {background-position:0 100%}
+
+div.whatsnewapp {display: none;}
+div.whatsnewapp#iphonewhatsnew {display: block;}
+
+div.sbol_apps_else a {color:#449d2f}
+div.sbol_apps_else a:hover {color:#e99900}
+
+div.sbol_apps_else div.sbol_openening li {list-style:none; padding-left:22px; background:url(../sbol/sbol_li_text.gif) 0 9px no-repeat; line-height:19px; margin-bottom:20px;}
+div.sbol_apps_else div.sbol_closed {padding-bottom:35px}
+
+
+
+div.sbol_apps_else p.tabletitle {font-size:13px; font-style:italic; color:#616161; line-height:17px; margin-bottom:10px; padding-right:10px;}
+div.sbol_apps_else table { font-size:13px; margin-bottom:20px;}
+div.sbol_apps_else table.limits td {padding:7px 11px 9px 11px; line-height:16px; vertical-align:top; border-bottom:1px dotted #449d2f}
+div.sbol_apps_else table.limits thead td {background:#dde4d6; border-bottom:0;} 
+div.sbol_apps_else table.limits thead td.sizecol {width:80px; border-left:1px solid #fff }
+
+div.sbol_apps_else table.limits td.groupnumber {width:71px;}
+
+div.sbol_apps_else table.limits td li { background:url(../sbol/sbol_li_text_green.gif) 0 9px no-repeat; margin-bottom:0;}
+
+div.sbol_apps_else table.limits tfoot td {background:#dde4d6; border-bottom:0;} 
+div.sbol_apps_else table.limits tfoot td.sizecol {width:80px; border-left:1px solid #fff }
+
+div.smallInfo {font-size:11px; color:#626262; line-height:16px;}
+div.smallInfo p {margin-bottom:10px !important}
+
+div.sbol_apps_else table.limits tbody tr.last td {border-bottom:0;}
+div.sbol_apps_else table.mbanklimits tbody tr.last td {border-bottom:1px dotted #449d2f !important}
+div.sbol_closed {display:none;}
+
+
+
+div.sbol_sbol_cases div.slider_chooser {margin-bottom:26px;}
+
+div.sbol_sbol_slider_wrapper {background:#fff; width:700px; height:474px; position:relative; margin-bottom:45px; -moz-box-shadow:0 0 15px #e5e2db; -webkit-box-shadow:0 0 15px #e5e2db; box-shadow:0 0 15px #e5e2db; display:none;}
+div.sbol_sbol_slider_wrapper div.cycle-slideshow-my {width:690px; height:391px; position:relative; left:5px; top:5px; border-bottom:1px solid #b7b7b7; padding-bottom:10px; overflow: hidden;}
+div.cycle-slideshow-my img {z-index: 1 !important}
+div.sbol_sbol_slider_wrapper .sliderPrev {left:0; top:200px;}
+div.sbol_sbol_slider_wrapper .sliderNext {right:0; top:200px;}
+div.sbol_sbol_slider_wrapper div.alt-caption {width:540px; font-size:14px; font-style:italic; position:absolute; bottom:8px; left:105px; height:45px; line-height:19px;} 
+div.sbol_sbol_slider_wrapper div.cycle-pager {text-align:left; position:absolute; top:420px; left:8px; width:85px;}
+div.sbol_sbol_slider_wrapper:first-child {display:block;}
+
+
+div.sbol_mbank_cases div.slider_chooser {margin-bottom:40px;}
+
+div.sbol_mbank_slider_wrapper {background:url(../sbol/sbol_mbank_sliderbg.jpg) 0 0 no-repeat; width:420px; height:326px; position:relative;display:none; margin:0 auto 120px auto;}
+div.sbol_mbank_slider_wrapper div.reflex {width:161px; height:310px; background:url(../sbol/sbol_mbank_slider_reflex.png) 0 0 no-repeat; position:absolute; left:137px; top:12px; z-index:1 !important;}
+div.sbol_mbank_slider_wrapper div.cycle-slideshow-my {width:146px; height:186px; position:relative; left:130px; top:73px;overflow: hidden;}
+div.sbol_mbank_slider_wrapper .sliderPrev {left:-20px; top:136px;}
+div.sbol_mbank_slider_wrapper .sliderNext {right:-5px; top:136px;}
+div.sbol_mbank_slider_wrapper div.alt-caption {width:400px; font-size:14px; font-style:italic; position:absolute; top:363px; left:0; height:70px; line-height:19px; text-align:center;} 
+div.sbol_mbank_slider_wrapper div.cycle-pager {text-align:center; position:absolute; top:338px; left:8px; width:390px;}
+div.sbol_mbank_slider_wrapper:first-child {display:block;}
+
+div.sbol_mbank_cases div.sbol_chooser {width:770px}
+div.sbol_mbank_cases div.sbol_chooser a {padding:0 20px;}
+
+
+div.sbol_sbol_cases div.sideBlock div.video {color:#737373; font-size:12px;}
+div.sbol_sbol_cases div.sideBlock div.video p {margin:0 !important; padding:3px 0 !important}
+
+div.cycle-slideshow-my {overflow: hidden !important}
+
+div.sbol_atm_cases div.slider_chooser {margin-bottom:26px;}
+
+div.sbol_atm_slider_wrapper {background:#fff; width:650px; height:464px; position:relative; margin-bottom:45px; -moz-box-shadow:0 0 15px #e5e2db; -webkit-box-shadow:0 0 15px #e5e2db; box-shadow:0 0 15px #e5e2db; display:none;}
+div.sbol_atm_slider_wrapper div.cycle-slideshow-my {width:640px; height:393px; position:relative; left:5px; top:5px;overflow: hidden;}
+div.sbol_atm_slider_wrapper .sliderPrev {left:0; top:177px;}
+div.sbol_atm_slider_wrapper .sliderNext {right:0; top:177px;}
+div.sbol_atm_slider_wrapper div.alt-caption {width:520px; font-size:14px; font-style:italic; position:absolute; bottom:8px; left:120px; height:45px; line-height:19px;} 
+div.sbol_atm_slider_wrapper div.cycle-pager {text-align:left; position:absolute; top:410px; left:8px; width:105px;}
+div.sbol_atm_slider_wrapper:first-child {display:block;}
+
+div.sbol_atm_cases div.sbol_chooser {width:770px}
+div.sbol_atm_cases div.sbol_chooser a {padding:0 12px;}
+
+div.sbol_inner div.sideBlock div.auth {color:#737373; font-size:12px; text-align:center; margin-bottom: 10px;}
+div.sbol_inner div.auth a.sideBlockBut {font-size:15px; color:#fff; text-decoration:none; background:url(../sbol/sbol_sbol_login.png) 0 0 no-repeat; width:162px; height:31px; line-height:27px; text-shadow:0 -1px #3c8a1e; font-weight:700; margin-bottom:4px; cursor: pointer;}
+div.sbol_inner div.auth a.sideBlockBut:hover {background-position:0 100%; color:#fff !important}
+
+div.sbol_inner div.aeroexpress-box{background-color: #FFFFFF; padding: 20px 30px 40px; text-align: center;}
+div.sbol_inner div.aeroexpress-box div.aero-comment{background:url(../../files/infografika_aeroexp_part_1.jpg) no-repeat; font-size:11px; padding-left:65px; line-height: 22px; color:#676767; text-align:left;}
+div.sbol_inner div.aeroexpress-links {margin:40px 0;}
+div.sbol_inner div.aeroexpress-links a.BlockBut {font-size:15px; color:#fff; text-decoration:none; background:url(../sbol/bg-BlockBut.png) 0 0 no-repeat; width:260px; height:31px; line-height:27px; text-shadow:0 -1px #3c8a1e; font-weight:700; margin-bottom:4px; cursor: pointer; display:block; text-align:center;}
+div.sbol_inner div.aeroexpress-links a.BlockBut:hover {background-position:0 100%; color:#fff !important}

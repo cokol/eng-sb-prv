@@ -1,0 +1,50 @@
+.gr_button{
+	height:37px;
+	background:url('../img/gr_btn_sprite.png') no-repeat;
+	white-space:nowrap;
+	margin:0;
+	padding:0 0 0 20px;
+	clear: both;
+	width: 130px;
+	cursor:pointer;
+}
+.gr_button .gr_button_r{
+	height:37px;
+	background:url('../img/gr_btn_sprite.png') no-repeat 100% -74px;
+	white-space:nowrap;
+	padding:0 20px 0 0;
+	margin:0;
+}
+.gr_button .gr_button_r .gr_button_t{
+	position:relative;
+	color:#fff;
+	padding:8px 10px 0 10px;
+	height:32px;
+	background:url('../img/gr_btn_sprite.png') repeat-x 0 -37px;
+	white-space:nowrap;
+	margin:0;
+}
+.round_corner{
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	background-image:url('../img/round.png');
+}
+.round_corner_table{
+	display:none;
+	width:900px;
+	height:600px;
+	position:absolute;
+	left:50%;
+	margin-left: -450px;
+	top:230px;
+	z-index:100;
+}
+#ya_map_shield{
+	z-index:90;
+	background:url('ui-lightness/images/ui-bg_diagonals-thick_20_666666_5F40x40.gif');
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+}

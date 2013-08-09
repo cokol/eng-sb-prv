@@ -1,0 +1,19 @@
+/*v.19072013.0*/#sectionSbol .pic {
+	background:url(../sbol/sbol_pic1.jpg) 5px 5px no-repeat !important;
+}
+
+#sectionMobile {
+	background:url(../sbol/sbol_iphone1.jpg) right 20px no-repeat !important;
+}
+
+#sectionBank .pic {
+	background:url(../sbol/sbol_bank1.jpg) 5px 5px no-repeat !important;
+}
+
+#sectionTerminals .pic {
+	background:url(../sbol/sbol_terminals1.jpg) 5px 5px no-repeat !important;
+}
+
+div.sbol_section div.text div.item span.num {
+	margin-left:-30px;
+}div.sbol_apps_else div.features li i.pic {	margin-left:-40px;  margin-top: 0;  top: 0;}.sbol_sbol_sliders_container {  display:block !important;  width:740px;  height:519px;  overflow:hidden;  position:relative;}.sbol_sbol_slider_wrapper {  display:block !important;  width:700px;  height:474px;  overflow:hidden;  position:relative;}.sbol_sbol_slider_wrapper .cycle-slideshow-my {  display:block !important;  width:690px;  height:402px;  overflow:hidden;  position:relative;}.sbol_apps_sliders_container {  display:block !important;  width:740px;  height:749px;  overflow:hidden;  position:relative;}.sbol_apps_slider_wrapper {  display:block !important;  width:405px;  height:749px;  overflow:hidden;  position:relative;}.sbol_apps_slider_wrapper .cycle-slideshow-my {  display:block !important;  width:260px;  height:462px;  overflow:hidden;  position:relative;}.sbol_mbank_sliders_container {  display:block !important;  width:740px;  height:446px;  overflow:hidden;  position:relative;}.sbol_mbank_slider_wrapper {  display:block !important;  width:420px;  height:326px;  overflow:hidden;  position:relative;}.sbol_mbank_slider_wrapper .cycle-slideshow-my {  display:block !important;  width:146px;  height:186px;  overflow:hidden;  position:relative;}.sbol_atm_sliders_container {  display:block !important;  width:740px;  height:509px;  overflow:hidden;  position:relative;}.sbol_atm_slider_wrapper {  display:block !important;  width:650px;  height:464px;  overflow:hidden;  position:relative;}.sbol_atm_slider_wrapper .cycle-slideshow-my {  display:block !important;  width:640px;  height:393px;  overflow:hidden;  position:relative;}

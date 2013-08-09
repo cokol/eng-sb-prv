@@ -1,0 +1,163 @@
+*{padding: 0px; margin: 0px;}
+
+/*  ------------------------ Тело документа ---------------------------   */
+/*html{
+   background-image: url(../img/setka_fon.gif); background-repeat: repeat;
+}*/
+
+BODY {
+  padding: 0px;
+  margin: 0px;
+  color: #454545 !important;
+  font-size: 11px;
+  font-family: Georgia, Arial, sans-serif;
+    /*	background: #FFFFFF;*/
+}
+
+/*  Класс для того, что не нужно выводить на печать в контексте  */
+.noprint {display: none;}
+
+#print{
+  position: absolute;
+  top: 71px;
+  left: 0;
+  z-index: 10;
+}
+#print._print{
+  width: 638px;
+  height: 42px;
+  text-align: right;
+}
+#logo{
+  position: absolute;
+  top: 71px;
+  left: 0;
+  width: 203px;
+  height: 42px;
+  text-align: left;
+  z-index: 1;
+}
+
+#sp_content{
+  margin: 196px 0 0 0;
+}
+.print_content{
+  width: 638px;
+  margin-bottom: 49px;
+}
+
+
+.print{
+   background-image: url(../img/link_v_print.gif);
+   background-position: left 3px;
+   background-repeat: no-repeat;
+   padding-left: 20px;
+   font-family: Arial;
+   font-style: italic;
+   font-size: 12px;
+}
+.print_content h2{
+  margin: 0 0 8px 0;
+  padding: 0;
+  font-size: 24px;
+  font-family: Georgia, Times New Roman;
+  color: #454545;
+  font-style: italic;
+  font-weight: normal;
+}
+#sp_content p{
+   padding: 0 20px 20px 0;
+   font-family: Arial;
+   font-size: 12px;
+   line-height: 16px;
+ }
+#sp_content p a{
+   font-family: Arial;
+   font-size: 14px;
+   font-style: italic;
+ }
+
+
+.footer_sp{
+  margin: 0 0 100px 0;
+  color: #999999 !important;
+  font-size: 11px;
+  font-family: Arial;
+}
+.footer_sp .c_m_td1{
+   padding-right: 53px;
+}
+.footer_sp .c_m_td2{
+   padding-right: 21px;
+}
+/*.footer_sp .c_m_td3{
+  width: 197px;
+}*/
+
+.print_content img.photo{
+ float: left;
+ margin: 2px 19px 10px 40px;
+}
+.print_content table.photo{
+ margin: 2px 19px 0 0;
+ float: left;
+}
+.print_content table.photo td.img_title{
+  text-align: center;
+  font-size: 11px;
+  font-family: Arial;
+  font-style: italic;
+  color: #999999;
+  padding-top: 5px;
+}
+
+
+
+
+/* ---------------  Списки --------------------- */
+
+UL {margin: 0 0 0 22px; padding: 0 0 0 5px;}
+UL LI {background: none; list-style-type: disc; margin: 2px 0 3px 0px; padding-left: 6px;}
+
+
+/*  ----------------------- Таблицы ----------------------- */
+
+div.table table{
+  margin-bottom: 45px;
+  width: 100%;
+}
+div.table table tr th{
+  padding: 9px 0 8px 15px;
+  vertical-align: top;
+  text-align: left;
+  color: #b30000 !important;
+  font-family: Arial;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 13px;
+  border-bottom: 1px solid #d8d8d8 !important;
+  border-top: 1px solid #d8d8d8 !important;
+}
+div.table table tr th span{
+  color: #b2b2b2 !important;
+  font-size: 11px;
+  font-family: Arial;
+  font-weight: normal;
+}
+div.table table tr td{
+  padding: 12px 0 7px 15px;
+  color: #505050;
+  font-family: Arial;
+  font-size: 12px;
+  border-bottom: 1px solid #d8d8d8 !important;
+}
+div.table div.tabl_title{
+  margin: 15px 0 12px 0;
+  padding: 0 0 0 15px;
+  color: #999999 !important;
+  font-family: Georgia, Times New Roman;
+  font-size: 12px;
+  font-style: italic;
+}
+				
+/* ------------------------ Скрываемые стили -------------------- */

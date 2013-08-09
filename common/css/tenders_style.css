@@ -1,0 +1,185 @@
+.contright2 {text-align:left;}
+
+.contest-serch-table label{font:normal 12px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;}
+
+.data-p{margin-left:6px;display:block;float:right;}
+.datepicker{width:156px;float:left;}
+.checkbox{display:block;float:left; margin-right:4px;}
+.date-label{float:left;margin-right:4px;padding-top:2px;}
+.first-date-label{float:left;margin-left:-10px;position:relative;padding-top:2px;}
+
+
+.contest-serch-table td{padding:10px 0px 5px 10px;font:normal 12px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;color:#666666;}
+.contest-serch-table .buttons-cont td{text-align:right;}
+
+.contest-serch-table td  .long-input{width:420px;}
+.contest-serch-table td select{width:420px;}
+
+
+
+.info-block{margin-bottom:20px;}
+
+.info-block h2.block-header{display:block;height:62px;background:url("../img/tenders/main_page/block_bg.png") no-repeat right -124px;padding-right:20px;padding-bottom:0px;}
+
+.info-block h2.block-header span{display:block;height:62px;background:url("../img/tenders/main_page/block_bg.png") no-repeat left -186px;padding-left:20px;}
+
+.info-block h2.block-header span a{font-size:20px;color:#666666;font-weight:normal;text-decoration:none;}
+
+.info-block.minimized h2.block-header{background-position:right 0px;}
+.info-block.minimized h2.block-header span{background-position:left -62px;}
+
+.info-block h2.block-header a{background:url("../img/tenders/main_page/show_arrow_1.gif") no-repeat right 16px; display:block;line-height:50px;cursor:pointer;}
+.info-block.minimized h2.block-header a{background:url("../img/tenders/main_page/show_arrow.gif") no-repeat right 16px;}
+
+.info-block h2.block-header b{color: #666666;font-size: 20px;font-weight: normal;text-decoration: none;}
+
+.info-block h2.block-header img{border:none;margin-right:10px;margin-bottom:-26px;margin-top:-8px;}
+*html #serch_info_block h2.block-header img{margin-bottom:-28px;}
+*html .info-block h2.block-header b{margin-top:-4px;} 
+
+.info-block.minimized h2.block-header a img{margin-top:0px;}
+
+.info-block.minimized .block-content{display:none;}
+
+.info-block .block-content{background:#ffffff url("../img/tenders/main_page/block_v1_bg_l.jpg") repeat-y left top;}
+
+.info-block .block-content_right{background:url("../img/tenders/main_page/block_v1_bg_r.jpg") repeat-y right top;}
+
+.info-block .block-content_right_1{background:url("../img/tenders/main_page/block_v_bg_r.jpg") no-repeat right top;}
+
+.info-block .block-content_left_1{background:url("../img/tenders/main_page/block_v_bg_l.jpg") no-repeat left top;padding:0px 20px;}
+
+.info-block .bottom{
+	height:42px;
+	background:url("../img/tenders/main_page/block_bg.png") no-repeat left -290px;
+	padding-left:30px;
+}
+* html .info-block .bottom {
+	overflow: hidden;
+}
+.info-block .bottom_right{
+	height:42px;
+	background:url("../img/tenders/main_page/block_bg.png") no-repeat right -248px;
+	padding-right:30px;
+}
+
+.search-results{font:normal 12px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;}
+.search-results td{padding:3px 6px;vertical-align:top;}
+
+.search-results-header{width:100%;font:normal 12px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;border-collapse: separate;border-left:4px #ffffff solid;}
+.search-results .search-results-header td{border-right:#bcb9b3 2px solid;}
+.search-results .search-results-header td.calendar-head{border-right:none;border-bottom:#bcb9b3 2px solid;}
+.search-results .search-results-header td.calendar-date-header{border:none;background:backrround:#ffffff;}
+
+.search-results thead td{background:#ffffff;border:none;}
+.search-results td{background:#f1f1f1;border:1px #bcb9b3 solid;}
+.search-results td.label{background:#ffffff;border-left:none;color:#197B30;border-right:none;}
+.search-results td.name{border-left:none;}
+.search-results td.last-c{border-right:none;}
+
+.info-block .pagination{clear:both;margin-top:10px;}
+
+.info-block .pagination a.next, .info-block .pagination a.prev{width:10px; height:10px; display:block; float:left;padding:0px;margin-top:4px;cursor:pointer; font-size:8px;}
+
+.info-block .pagination a.next{margin-left:10px;background:url(../img/tenders/main_page/pix/nav_arrows.gif) no-repeat right top;}
+
+.info-block .pagination a.prev{background:url(../img/tenders/main_page/pix/nav_arrows.gif) no-repeat left top;margin-right:10px;}
+
+
+
+.info-block .pagination a.active.next{background:url("../img/tenders/main_page/pix/nav_arrows.gif") no-repeat -10px bottom;}
+
+.info-block .pagination a.active.prev{background:url(../img/tenders/main_page/pix/nav_arrows.gif) no-repeat left bottom;}
+
+.info-block .pagination span{float:left;display:block;font-size:14px;font-weight:bold;color:#717171;}
+.info-block .pagination span a{font-weight:normal;color:#0069BF;cursor:pointer;}
+
+.info-block .adv-table{font:normal 12px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;}
+.info-block .adv-table td{vertical-align:top;padding:7px 0px 20px 0px;text-align:left;color:#666666;font-size:14px;}
+.info-block .adv-table th{text-align:left;color:#91BF2E;font-weight:normal;border-bottom:#BCB9B3 1px solid;padding:4px 0px;}
+.info-block .adv-table td.label{padding:7px 10px;
+}
+
+.info-block .adv-table td.label span.change{background:url("../img/tenders/main_page/pix/change.gif") no-repeat left top; padding-left:20px;}
+.info-block .adv-table td.label span.del{background:url("../img/tenders/main_page/pix/cancel.gif") no-repeat left top; padding-left:20px;}
+.info-block .adv-table td.label span.adv{background:url("../img/tenders/main_page/pix/adv.gif") no-repeat left top; padding-left:20px;padding-bottom:1px;}
+.info-block .adv-table td.label span.new{background:url("../img/tenders/main_page/pix/add.gif") no-repeat left top; padding-left:20px;}
+.info-block .adv-table td.label span.close{background:url("../img/tenders/main_page/pix/close3.gif") no-repeat left top; padding-left:20px;padding-bottom:3px;}
+
+a.compress{background:url("../img/tenders/main_page/pix/compress.gif") no-repeat left top; padding-left:20px;font:12px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;}
+
+.tenders-tbl td {border-bottom:1px solid #BCB9B3;padding:10px 0px;color:#666666;font:normal 12px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;padding-bottom:10px; vertical-align:top;}
+
+.tenders-tbl td b{font:normal 14px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;color:#666666;}
+
+.tenders-tbl td.link, .tenders-tbl .first-r td.link{padding-left:10px; vertical-align:bottom;padding-bottom:10px;border-bottom:1px solid #BCB9B3;}
+.tenders-tbl td.link a{background:url("../img/tenders/main_page/pix/more.gif") no-repeat scroll left top transparent;padding-left:20px;}
+.tenders-tbl td span{color:#91BF2E;}
+.tenders-tbl .first-r td{border:none;padding-bottom:0px;}
+
+.parts-table td{border:none;padding:5px;}
+.parts-table th{font:normal 12px Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;border-bottom: #91BF2E 1px solid; padding:5px;vertical-align:top;}
+
+.number-of-elements{text-align:right;color:#666666;}
+/*.number-of-elements select{color:#666666;}*/
+
+a.dp-choose-date {
+/*	left:0;
+	position: absolute;
+    margin: 0 0 0 169px;*/
+	float:right;
+    width: 0;
+    overflow: hidden;
+    height: 20px;
+    padding: 0 0 0 25px;
+    background: url(../img/tenders/main_page/fo_calendar_button.gif) no-repeat;
+}
+
+.empty-txt{padding-left:20px;color:#666666!important;}
+
+.buttons-cont input, .buttons-cont img{position:relative; z-index:1; margin-bottom:-20px;}
+
+#serch_info_block  .block-content_left_1{
+	min-height:60px;
+}
+.advanced-field{
+	display:none;
+}
+.search-label{
+	width:220px;
+}
+.advanced-link{
+	text-decoration:none;
+	background:url(../img/tenders/but/bulb-arrow-btm.gif) no-repeat left top;
+	padding-left:36px;
+	padding-top:10px;
+	padding-bottom:10px;
+	line-height:36px;
+}
+.advanced-link.down-arrow{
+	background-image:url(../img/tenders/but/bulb-arrow-lft.gif);
+}
+.advanced-link span{
+	border-bottom:#0069BF 1px dashed;
+}
+.advanced-link:hover{
+	cursor:pointer !important;
+}
+.advanced-link:hover span{
+	border-bottom:none;
+	cursor:pointer !important;
+}
+.back-link{font-size:12px;}
+div.dp-popup{float:left;}
+div.dp-popup{margin-left:-160px}
+
+.reset_button{
+	position:relative;
+	border:0;
+	outline:0;
+	color:transparent;
+	cursor: pointer;
+	margin-right:20px;
+	z-index:1;
+	margin-bottom:-20px;
+}
