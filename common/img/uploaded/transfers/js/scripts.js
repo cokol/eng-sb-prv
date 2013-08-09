@@ -2,9 +2,6 @@
 
   if ($(".transfer-form").length) {
   
-    $("#formInt").attr("autocomplete", "off");
-    $("#formRus").attr("autocomplete", "off");
-  
     var transfersRaw = $.getCsv('../../../../common/img/uploaded/transfers/example.csv');
     
     if (transfersRaw) {
@@ -669,8 +666,11 @@
         } else if (transferType == 2) {
           transferType = "Безнал"
         }
+        
 
         var transferCurr = $("[name='tf-curr']:checked").val();
+
+        
         
         if (transferCurr == 1) {
           transferCurr = "Рубли";
