@@ -110,8 +110,8 @@
     $(this).formatNumber();
   });
   
-  $(".transfer-form input:text").blur(function() {
-    //$(".autocomplete").remove();
+  $(".transfer-form input:text").focus(function() {
+    $(".autocomplete").remove();
   });
   
   $(".transfers-tabs .item a").click(function() {
@@ -475,16 +475,59 @@
     
     $('<input/>').attr({ type: 'hidden', id: 'tf_form_from_val', name: 'tf_form_from_val', 'value' : 0}).insertAfter($("#tf_form_from"));
     $("#tf_form_from").bind('change', function(){
-      $(this).next().val('0');
+      var exist = 0;
+      var val = $(this).val();
+      for (i in cities) {
+        name = cities[i].name;
+        if (name.toLowerCase().indexOf(val.toLowerCase()) == 0) {
+          exist = 1;
+        }
+      }
+      
+      if (!exist) {
+        $(this).next().val('0');
+      } else {
+        $(this).next().val('1');
+      }
     })
 
     
     $('<input/>').attr({ type: 'hidden', id: 'tf_form_to_val', name: 'tf_form_to_val', 'value' : 0}).insertAfter($("#tf_form_to"));
-    $("#tf_form_to").bind('change', function(){$(this).next().val('0')})
+    $("#tf_form_to").bind('change', function(){
+      var exist = 0;
+      var val = $(this).val();
+      for (i in cities) {
+        name = cities[i].name;
+        if (name.toLowerCase().indexOf(val.toLowerCase()) == 0) {
+          exist = 1;
+        }
+      }
+      
+      if (!exist) {
+        $(this).next().val('0');
+      } else {
+        $(this).next().val('1');
+      }
+    })
 
     
     $('<input/>').attr({ type: 'hidden', id: 'tf_form_country_val', name: 'tf_form_country_val', 'value' : 0}).insertAfter($("#tf_form_country"));
-    $("#tf_form_country").bind('change', function(){$(this).next().val('0')})
+    $("#tf_form_country").bind('change', function(){
+      var exist = 0;
+      var val = $(this).val();
+      for (i in countries) {
+        name = countries[i].name;
+        if (name.toLowerCase().indexOf(val.toLowerCase()) == 0) {
+          exist = 1;
+        }
+      }
+      
+      if (!exist) {
+        $(this).next().val('0');
+      } else {
+        $(this).next().val('1');
+      }
+    })
 
     $("#tf_form_sum").rules("add", { regex: "^[0-9\\s]+ р.$" });
 
